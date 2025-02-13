@@ -23,7 +23,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import Image from "next/image";
+// import Image from "next/image";
 // import HorizontalScrollCarousel from "../HorizontalScrollCarousel";
 
 export const MacbookScroll = ({
@@ -164,20 +164,20 @@ export const Lid = ({
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <Image
+        {/* <Image
           src={src as string}
           alt="aceternity logo"
           fill
           className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
-        />
-        {/* <video
+        /> */}
+        <video
           src={src as string}
           autoPlay
           loop
           muted
           playsInline
           className="bg-black object-fill object-center absolute rounded-lg inset-0 h-full w-full"
-        /> */}
+        />
       </motion.div>
     </div>
   );

@@ -51,7 +51,7 @@ export default function Creative() {
                     This Macbook is built with Tailwindcss. <br /> No kidding.
                   </span>
                 }
-                src={`/macbook_img.png`}
+                src={`/1739448852325344.mp4`}
                 showGradient={false}
               />
             </div>
