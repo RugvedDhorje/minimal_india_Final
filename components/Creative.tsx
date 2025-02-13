@@ -18,7 +18,7 @@ export default function Creative() {
       <div className="w-full">
         {/* creative section */}
         <div className=" w-full">
-          <div className="max-w-screen-2xl w-11/12 mx-auto mt-[-400px]">
+          <div className="max-w-screen-2xl w-11/12 mx-auto pt-[-400px]">
             <motion.div
               // initial={{ y: -100 }}
               // whileInView={{ y: 0 }}

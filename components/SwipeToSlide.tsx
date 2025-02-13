@@ -96,8 +96,10 @@ const info = [
 ];
 
 function MultipleItems() {
-  const [activeCard, setActiveCard] = useState(null);
-  const [hoveredCard, setHoveredCard] = useState(null);
+  // const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const settings = {
     className: "center",
@@ -110,7 +112,7 @@ function MultipleItems() {
     slidesToScroll: 1, // Moves 2 slides at a time
   };
 
-  const handleCardClick = (id) => {
+  const handleCardClick = (id: number) => {
     setActiveCard(id);
   };
 

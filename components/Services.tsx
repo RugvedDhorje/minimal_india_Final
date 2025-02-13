@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import About from "./About";
 import Creative from "./Creative";
-import Slider3D from "./Slider3D";
+// import Slider3D from "./Slider3D";
 
 export default function Services() {
   const circleRef = useRef(null);
@@ -11,8 +11,8 @@ export default function Services() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.24, 0.4], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.24, 0.4], [1, 5]);
+  const circleScale = useTransform(scrollYProgress, [0.28, 0.4], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.28, 0.4], [1, 5]);
 
   // Move the section up **after** the circle expands
   const sectionY = useTransform(scrollYProgress, [0.4, 0.5], ["-30%", "-100%"]);
@@ -123,9 +123,7 @@ export default function Services() {
       <div className="w-full">
         <About />
       </div>
-      <div className="w-full">
-        <Slider3D />
-      </div>
+      <div className="w-full">{/* <Slider3D /> */}</div>
     </div>
   );
 }

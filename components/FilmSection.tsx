@@ -6,7 +6,7 @@ export default function FilmSection() {
     <ParallaxProvider>
       {/* Background Video Section */}
       <div className="w-full relative h-[700px] ">
-        <div className="absolute top-10 left-0 w-full h-full rounded-3xl">
+        <div className="absolute top-10 left-0 w-full h-full rounded-3xl bg-gray-700">
           {/* <video
             src="https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4"
             autoPlay
