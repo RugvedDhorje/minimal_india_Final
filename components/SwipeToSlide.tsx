@@ -9,7 +9,8 @@ const info = [
     id: 1,
     title: "Title 1",
     Profile: "/images/1696858826722.jpg",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "A leading company that specializes in providing advanced technology and sustainable practices to solve modern challenges.",
     companyName: "Acme Corporation",
@@ -20,7 +21,8 @@ const info = [
     id: 2,
     title: "Title 2",
     Profile: "/images/4611023cdfc1d96c5bc7486cdc08ada9.png",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "Experts in digital transformation, offering services like software development and cloud solutions to drive business success.",
     companyName: "TechNest Solutions",
@@ -31,7 +33,8 @@ const info = [
     id: 3,
     title: "Title 3",
     Profile: "/images/original-eb6e8ee8227e5464dce39146e8e7da54.png",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "A trailblazer in research and development, introducing groundbreaking technologies for a sustainable future.",
     companyName: "Global Innovations Ltd.",
@@ -42,7 +45,8 @@ const info = [
     id: 4,
     title: "Title 4",
     Profile: "/homeBg.jpg",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "Renowned for providing consultancy services, specializing in business analytics and market strategy.",
     companyName: "VistaTech Enterprises",
@@ -53,7 +57,8 @@ const info = [
     id: 5,
     title: "Title 5",
     Profile: "/QR_code.png",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "An energy-focused company delivering cutting-edge renewable energy solutions to global markets.",
     companyName: "Fusion Dynamics Inc.",
@@ -64,7 +69,8 @@ const info = [
     id: 6,
     title: "Title 6",
     Profile: "/img2.jpg",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "A tech giant offering solutions in cybersecurity, AI-driven analytics, and enterprise-grade software development.",
     companyName: "AlphaWave Technologies",
@@ -75,7 +81,8 @@ const info = [
     id: 7,
     title: "Title 7",
     Profile: "/img3.jpg",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "Dedicated to healthcare innovation, specializing in medical devices and diagnostics for improved patient care.",
     companyName: "NexGen Innovations",
@@ -86,7 +93,8 @@ const info = [
     id: 8,
     title: "Title 8",
     Profile: "/img4.png",
-    video: "/2795382-uhd_3840_2160_25fps.mp4",
+    video:
+      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
       "A leader in biotechnology, focusing on genetic research and pharmaceutical development for personalized medicine.",
     companyName: "InnovaSphere Labs",

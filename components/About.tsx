@@ -3,7 +3,7 @@ import EmailSubscriptionForm from "./EmailSubscriptionForm";
 export default function About() {
   return (
     <div className="w-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] py-10 mt-[-170px]">
-      <div className="bg-gray-100 w-11/12 mx-auto rounded-3xl flex justify-evenly my-5 shadow-lg">
+      <div className="bg-gray-100 w-10/12 mx-auto rounded-3xl flex justify-evenly my-5 shadow-lg">
         <div className="h-[500px] w-3/12 my-6 rounded-3xl bg-gray-200 flex flex-col justify-center ">
           <img
             src="/QR_code.png"
