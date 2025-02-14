@@ -18,12 +18,12 @@ export default function Creative() {
       <div className="w-full">
         {/* creative section */}
         <div className=" w-full">
-          <div className="max-w-screen-2xl w-11/12 mx-auto pt-[-400px]">
+          <div className="max-w-screen-2xl w-11/12 mx-auto">
             <motion.div
               // initial={{ y: -100 }}
               // whileInView={{ y: 0 }}
               // transition={{ duration: 0.5 }}
-              className="w-full pt-28"
+              className="w-full"
             >
               <h1 className="text-[#292929] text-[60px] mx-auto leading-none font-bold mt-14 text-center font-clash pt-[50px]">
                 Designs that speak louder than words
@@ -33,7 +33,7 @@ export default function Creative() {
                 inspire
               </h2>
             </motion.div>
-            <div className="mt-5 w-full flex   justify-end">
+            <div className="mt-5 w-full flex justify-end">
               <NavigationMenuDemo />
             </div>
             <div className="w-full">

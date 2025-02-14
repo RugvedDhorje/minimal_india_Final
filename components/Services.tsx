@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import About from "./About";
+// import About from "./About";
 import Creative from "./Creative";
 // import Slider3D from "./Slider3D";
 
@@ -16,13 +16,13 @@ export default function Services() {
 
   // Move the section up **after** the circle expands
   const sectionY = useTransform(scrollYProgress, [0.4, 0.5], ["-30%", "-100%"]);
-  const sectionOpacity = useTransform(scrollYProgress, [0.22, 0.38], [1, 0]);
+  const sectionOpacity = useTransform(scrollYProgress, [0.27, 0.38], [1, 0]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {/* Sticky Section */}
       <motion.div
-        className="max-w-screen-2xl w-full mx-auto rounded-t-3xl overflow-hidden z-20 bg-opacity-20 mt-[400px] pb-[100px]"
+        className="w-full mx-auto rounded-t-3xl overflow-hidden z-20 mt-[400px] pb-[100px]"
         style={{
           position: "sticky", // Keeps it fixed until scroll threshold
           top: 0, // Sticks to the top of the screen
@@ -34,7 +34,7 @@ export default function Services() {
           Embrace the future of <br /> urban mobility
         </h1>
 
-        <div className="w-10/12 mx-auto flex flex-wrap mb-10 relative">
+        <div className="max-w-screen-2xl w-9/12 mx-auto flex flex-wrap mb-10 relative">
           {/* Circle in the middle */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
@@ -117,11 +117,8 @@ export default function Services() {
       </motion.div>
 
       {/* Creative Section (Content below animation) */}
-      <div className="w-full mx-auto rounded-t-3xl pb-40">
+      <div className="w-full mx-auto rounded-t-3xl absolute top-[700px]">
         <Creative />
-      </div>
-      <div className="w-full">
-        <About />
       </div>
       <div className="w-full">{/* <Slider3D /> */}</div>
     </div>
