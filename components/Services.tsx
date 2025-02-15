@@ -15,8 +15,12 @@ export default function Services() {
   const innerCircleScale = useTransform(scrollYProgress, [0.28, 0.4], [1, 5]);
 
   // Move the section up **after** the circle expands
-  const sectionY = useTransform(scrollYProgress, [0.4, 0.5], ["-30%", "-100%"]);
-  const sectionOpacity = useTransform(scrollYProgress, [0.27, 0.38], [1, 0]);
+  const sectionY = useTransform(
+    scrollYProgress,
+    [0.5, 0.65],
+    ["-30%", "-100%"]
+  );
+  const sectionOpacity = useTransform(scrollYProgress, [0.3, 0.34], [1, 0]);
 
   return (
     <div className="relative w-full">
