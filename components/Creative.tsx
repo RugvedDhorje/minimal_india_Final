@@ -18,8 +18,8 @@ export default function Creative() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.66, 0.8], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.66, 0.8], [1, 50]);
+  const circleScale = useTransform(scrollYProgress, [0.65, 0.8], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.65, 0.8], [1, 50]);
 
   return (
     <div className="rounded-t-3xl w-full  mx-auto bg-transparent">
