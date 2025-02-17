@@ -8,7 +8,7 @@ import CodeProject from "./CodeProjects";
 import { MacbookScroll } from "./ui/macbook-scroll";
 import { NavigationMenuDemo } from "./NavigationButton";
 import { useRef } from "react";
-// import CircleCarousel from "./CircleCarousel";
+import CircleCarousel from "./CircleCarousel";
 
 export default function Creative() {
   const cards = data.map((card, index) => (
@@ -19,8 +19,8 @@ export default function Creative() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.65, 0.8], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.65, 0.8], [1, 50]);
+  const circleScale = useTransform(scrollYProgress, [0.66, 0.8], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.66, 0.8], [1, 100]);
 
   return (
     <div className="rounded-t-3xl w-full  mx-auto bg-transparent">
@@ -37,7 +37,7 @@ export default function Creative() {
               <h1 className="text-[#292929] text-[60px] mx-auto leading-none font-bold mt-14 text-center font-clash pt-[50px]">
                 Designs that speak louder than words
               </h1>
-              <h2 className="text-[#292929] text-[30px] mx-auto leading-none text-center mt-5">
+              <h2 className="text-[#292929] text-[30px] mx-auto leading-none text-center font-clash mt-5">
                 From bold ideas to beautiful executions, we craft visuals that
                 inspire
               </h2>
@@ -106,11 +106,11 @@ export default function Creative() {
             <FilmSection />
           </div>
         </div>
-        {/* <div className="w-full">
+        <div className="w-full">
           <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
             <CircleCarousel />
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
