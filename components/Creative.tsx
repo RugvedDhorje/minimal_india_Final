@@ -8,6 +8,7 @@ import CodeProject from "./CodeProjects";
 import { MacbookScroll } from "./ui/macbook-scroll";
 import { NavigationMenuDemo } from "./NavigationButton";
 import { useRef } from "react";
+// import CircleCarousel from "./CircleCarousel";
 
 export default function Creative() {
   const cards = data.map((card, index) => (
@@ -94,17 +95,22 @@ export default function Creative() {
               />
             </div>
             {/* <HorizontalScrollCarousel /> */}
-            <div className="w-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] mt-[-465px]">
+            <div className="w-full bg-gradient-to-b from-[#000] via-[#130C0B] to-[#0C0807] mt-[-465px]">
               <CodeProject />
             </div>
           </div>
         </div>
         {/* Film making Section */}
-        <div className="w-full bg-gradient-to-r from-[#130C0B] to-[#0C0807]">
+        <div className="w-full bg-gradient-to-b from-[#0C0807] to-[#130C0B]">
           <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
             <FilmSection />
           </div>
         </div>
+        {/* <div className="w-full">
+          <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
+            <CircleCarousel />
+          </div>
+        </div> */}
       </div>
     </div>
   );
