@@ -9,7 +9,10 @@ export default function HomePage() {
   const textY = useTransform(scrollY, [0, 500], [0, -200]);
   return (
     <>
-      <div className="w-full mx-auto relative min-h-screen h-full z-50 bg-gray-200">
+      <div
+        id="home"
+        className="w-full mx-auto relative min-h-screen h-full z-50 bg-gray-200"
+      >
         {/* Animation */}
 
         {/* <div className="absolute inset-0 z-50 h-full w-full overflow-hidden"> */}

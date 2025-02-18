@@ -27,7 +27,7 @@ export default function Creative() {
   );
 
   return (
-    <div className="rounded-t-3xl w-full  mx-auto bg-transparent">
+    <div id="design" className="rounded-t-3xl w-full  mx-auto bg-transparent">
       <div className="w-full">
         {/* creative section */}
         <div className=" w-full">
@@ -57,7 +57,10 @@ export default function Creative() {
           {/* Tech section */}
           <div className="w-12/12 mx-auto">
             {/* <TechSection /> */}
-            <div className="overflow-hidden dark:bg-[#0B0B0F] w-full relative">
+            <div
+              id="tech"
+              className="overflow-hidden dark:bg-[#0B0B0F] w-full relative"
+            >
               <div className="absolute inset-0 flex justify-center -z-10 pt-[500px]">
                 <motion.div
                   ref={circleRef}
@@ -100,7 +103,10 @@ export default function Creative() {
           <CircleCarousel />
         </div>
         {/* Film making Section */}
-        <div className="w-full bg-gradient-to-b from-black via-[#0C0807] to-[#130C0B]">
+        <div
+          id="film"
+          className="w-full bg-gradient-to-b from-black via-[#0C0807] to-[#130C0B]"
+        >
           <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
             <FilmSection />
           </div>
