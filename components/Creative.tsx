@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Card, Carousel } from "./ui/apple-cards-carousel";
 import Image from "next/image";
 import FilmSection from "./FilmSection";
-import CodeProject from "./CodeProjects";
+// import CodeProject from "./CodeProjects";
 import { MacbookScroll } from "./ui/macbook-scroll";
 import { NavigationMenuDemo } from "./NavigationButton";
 import { useRef } from "react";
@@ -19,8 +19,12 @@ export default function Creative() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.66, 0.8], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.66, 0.8], [1, 100]);
+  const circleScale = useTransform(scrollYProgress, [0.62, 0.64], [1, 150]);
+  const innerCircleScale = useTransform(
+    scrollYProgress,
+    [0.62, 0.64],
+    [1, 100]
+  );
 
   return (
     <div className="rounded-t-3xl w-full  mx-auto bg-transparent">
@@ -85,30 +89,20 @@ export default function Creative() {
                 </motion.div>
               </div>
               <MacbookScroll
-                title={
-                  <span>
-                    This Macbook is built with Tailwindcss. <br /> No kidding.
-                  </span>
-                }
                 src={`/1739448852325344.mp4`}
                 showGradient={false}
               />
             </div>
             {/* <HorizontalScrollCarousel /> */}
-            <div className="w-full bg-gradient-to-b from-[#000] via-[#130C0B] to-[#0C0807] mt-[-465px]">
-              <CodeProject />
-            </div>
           </div>
+        </div>
+        <div className="z-50 w-full bg-gradient-to-b from-[#000] via-[#130C0B] to-[#0C0807]">
+          <CircleCarousel />
         </div>
         {/* Film making Section */}
-        <div className="w-full bg-gradient-to-b from-[#0C0807] to-[#130C0B]">
+        <div className="w-full bg-gradient-to-b from-black via-[#0C0807] to-[#130C0B]">
           <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
             <FilmSection />
-          </div>
-        </div>
-        <div className="w-full">
-          <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
-            <CircleCarousel />
           </div>
         </div>
       </div>
