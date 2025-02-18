@@ -1,14 +1,14 @@
 const GalaxyParticles = () => {
-  const particles = Array.from({ length: 100 }, (_, i) => ({
+  const particles = Array.from({ length: 40 }, (_, i) => ({
     id: i,
-    size: Math.random() * 2 + 1, // Random size between 2px and 6px
+    size: Math.random() * 1 + 1, // Random size between 2px and 6px
     top: Math.random() * 100 + "%",
     left: Math.random() * 100 + "%",
     delay: Math.random() * 2 + "s", // Random delay for staggered animation
   }));
 
   return (
-    <div className="relative w-full h-36 -z-10 overflow-hidden">
+    <div className="relative w-full h-[100px] -z-10 overflow-hidden">
       {/* Galaxy Particles */}
       {particles.map((p) => (
         <div

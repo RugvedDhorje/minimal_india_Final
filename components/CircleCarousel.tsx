@@ -609,22 +609,77 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import GalaxyParticles from "./GalaxyParticles";
+
 const images = [
-  "/images/dragon_1.jpg",
-  "/images/dragon_2.jpg",
-  "/images/dragon_3.jpg",
-  "/images/dragon_4.jpg",
-  "/images/dragon_5.jpg",
-  "/images/dragon_6.jpg",
-  "/images/dragon_7.jpg",
-  "/images/dragon_8.jpg",
-  "/images/dragon_9.jpg",
+  {
+    id: 1,
+    img: "/images/dragon_1.jpg",
+    name: "Tanmay",
+    description:
+      "Developed an AI-powered soap formula that enhanced skin hydration while reducing environmental impact.",
+  },
+  {
+    id: 2,
+    name: "Gaurav",
+    img: "/images/dragon_2.jpg",
+    description:
+      "Created a sustainable soap using AI-driven ingredient optimization, improving both cost efficiency and quality.",
+  },
+  {
+    id: 3,
+    name: "Rugved",
+    img: "/images/dragon_3.jpg",
+    description:
+      "Designed an AI-based fragrance infusion technique that customizes scents based on user preferences.",
+  },
+  {
+    id: 4,
+    name: "Varun",
+    img: "/images/dragon_4.jpg",
+    description:
+      "Implemented a machine learning model to predict ideal soap compositions for different skin types.",
+  },
+  {
+    id: 5,
+    name: "Shruti",
+    img: "/images/dragon_5.jpg",
+    description:
+      "Engineered an AI-driven supply chain that reduced soap production waste by 30%.",
+  },
+  {
+    id: 6,
+    name: "Pranav",
+    img: "/images/dragon_6.jpg",
+    description:
+      "Developed a deep learning algorithm to analyze customer feedback and refine soap formulas in real time.",
+  },
+  {
+    id: 7,
+    name: "Yash",
+    img: "/images/dragon_7.jpg",
+    description:
+      "Used generative AI to create unique soap designs and textures for a personalized skincare experience.",
+  },
+  {
+    id: 8,
+    name: "Sanket",
+    img: "/images/dragon_8.jpg",
+    description:
+      "Created an AI-powered chatbot that recommends the best soap based on skin analysis and climate data.",
+  },
+  {
+    id: 9,
+    name: "Tejas",
+    img: "/images/dragon_9.jpg",
+    description:
+      "Designed a blockchain-integrated AI system to ensure transparency in sourcing organic soap ingredients.",
+  },
 ];
+
+// ];
 const CircularImageCarousel = () => {
-  // Since we can't use real images, we'll use placeholders
-  // const images = Array(9)
-  //   .fill(null)
-  //   .map((_, i) => `/api/placeholder/100/100`);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
 
@@ -645,113 +700,172 @@ const CircularImageCarousel = () => {
   const OFFSET = CIRCLE_SIZE / 2 + IMAGE_SIZE / 2; // Distance from center to image center
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-center bg-black">
-      <div className="w-5/12 mx-auto bg-gradient-to-b from-neutral-400 to-transparent flex justify-center items-center h-[70%] rounded-full">
+    <>
+      <motion.div className="w-full pt-5 bg-black">
+        <h1 className="text-white text-[80px] mx-auto leading-none font-bold mt-14 text-center">
+          Code with clarity
+        </h1>
+        <h2 className="text-white text-[40px] mx-auto leading-none text-center mt-5">
+          Smart solutions for every problem
+        </h2>
+      </motion.div>
+      <div className="w-full flex justify-center items-center bg-black py-10">
+        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            Discover Tech
+          </span>
+        </button>
+      </div>
+      <div className="relative w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0">
         <div
-          className="relative rounded-full flex justify-center items-center transition-transform duration-500"
+          className="relative w-[600px] mx-auto flex justify-center items-center h-[600px] rounded-full "
           style={{
-            width: `${CIRCLE_SIZE}px`,
-            height: `${CIRCLE_SIZE}px`,
-            transform: `rotate(${rotation}deg)`,
+            background: `linear-gradient(
+          to bottom,
+          rgba(163, 163, 163, 0.7) 5%,
+          rgba(163, 163, 163, 0.4) 20%,
+          rgba(163, 163, 163, 0.2) 40%,
+          rgba(0, 0, 0, 0) 60%,
+          rgba(0, 0, 0, 0) 100%
+        )`,
           }}
         >
-          {/* Center point for reference */}
-          <div className="w-2 h-2 rounded-full absolute" />
-
-          {/* Top Image (Current) */}
           <div
-            className="absolute"
+            className="relative rounded-full flex justify-center items-center transition-transform duration-500"
             style={{
-              transform: `rotate(${-rotation}deg) translateY(-${OFFSET}px)`,
-              width: `${IMAGE_SIZE}px`,
-              height: `${IMAGE_SIZE}px`,
+              width: `${CIRCLE_SIZE}px`,
+              height: `${CIRCLE_SIZE}px`,
+              transform: `rotate(${rotation}deg)`,
             }}
           >
-            <img
-              src={images[currentIndex]}
-              alt={`Image ${currentIndex}`}
-              className="w-full h-full rounded-full object-cover border-2 border-white shadow-lg "
-            />
+            {/* Center point for reference */}
+            {/* <div className="w-2 h-2 rounded-full absolute" /> */}
+
+            {/* Top Image (Current) */}
+            <div
+              className="absolute"
+              style={{
+                transform: `rotate(${-rotation}deg) translateY(-${OFFSET}px)`,
+                width: `${IMAGE_SIZE}px`,
+                height: `${IMAGE_SIZE}px`,
+              }}
+            >
+              <img
+                src={images[currentIndex].img}
+                alt={images[currentIndex].name}
+                className="w-full h-full rounded-full object-cover  "
+              />
+            </div>
+
+            {/* Right Image (Next) */}
+            <div
+              className="absolute"
+              style={{
+                transform: `rotate(${-rotation}deg) translateX(${OFFSET}px)`,
+                width: `${IMAGE_SIZE}px`,
+                height: `${IMAGE_SIZE}px`,
+              }}
+            >
+              <img
+                src={images[(currentIndex + 1) % images.length].img}
+                alt={images[(currentIndex + 1) % images.length].name}
+                className="w-full h-full rounded-full object-cover"
+              />
+            </div>
+
+            {/* Bottom Image */}
+            <div
+              className="absolute"
+              style={{
+                transform: `rotate(${-rotation}deg) translateY(${OFFSET}px)`,
+                width: `${IMAGE_SIZE}px`,
+                height: `${IMAGE_SIZE}px`,
+              }}
+            >
+              <img
+                src={images[(currentIndex + 2) % images.length].img}
+                alt={images[(currentIndex + 2) % images.length].name}
+                className="w-full h-full rounded-full object-cover"
+              />
+            </div>
+
+            {/* Left Image (Previous) */}
+            <div
+              className="absolute"
+              style={{
+                transform: `rotate(${-rotation}deg) translateX(-${OFFSET}px)`,
+                width: `${IMAGE_SIZE}px`,
+                height: `${IMAGE_SIZE}px`,
+              }}
+            >
+              <img
+                src={
+                  images[(currentIndex - 1 + images.length) % images.length].img
+                }
+                alt={
+                  images[(currentIndex - 1 + images.length) % images.length]
+                    .name
+                }
+                className="w-full h-full rounded-full object-cover "
+              />
+            </div>
           </div>
-
-          {/* Right Image (Next) */}
-          <div
-            className="absolute"
-            style={{
-              transform: `rotate(${-rotation}deg) translateX(${OFFSET}px)`,
-              width: `${IMAGE_SIZE}px`,
-              height: `${IMAGE_SIZE}px`,
-            }}
-          >
-            <img
-              src={images[(currentIndex + 1) % images.length]}
-              alt={`Image ${(currentIndex + 1) % images.length}`}
-              className="w-full h-full rounded-full object-cover border-2 border-white shadow-lg"
-            />
+          <div className="absolute -top-[7%] w-10/12 mx-auto h-[100px] -z-10">
+            <GalaxyParticles />
           </div>
-
-          {/* Bottom Image */}
           <div
-            className="absolute"
+            className="absolute w-[150%] h-[60%] bottom-10 bg-black"
             style={{
-              transform: `rotate(${-rotation}deg) translateY(${OFFSET}px)`,
-              width: `${IMAGE_SIZE}px`,
-              height: `${IMAGE_SIZE}px`,
+              background: `linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 15%,
+            rgba(0, 0, 0, 1) 40%,
+            rgba(0, 0, 0, 1) 100%
+          )`,
             }}
           >
-            <img
-              src={images[(currentIndex + 2) % images.length]}
-              alt={`Image ${(currentIndex + 2) % images.length}`}
-              className="w-full h-full rounded-full object-cover border-2 border-white shadow-lg"
-            />
-          </div>
-
-          {/* Left Image (Previous) */}
-          <div
-            className="absolute"
-            style={{
-              transform: `rotate(${-rotation}deg) translateX(-${OFFSET}px)`,
-              width: `${IMAGE_SIZE}px`,
-              height: `${IMAGE_SIZE}px`,
-            }}
-          >
-            <img
-              src={images[(currentIndex - 1 + images.length) % images.length]}
-              alt={`Image ${
-                (currentIndex - 1 + images.length) % images.length
-              }`}
-              className="w-full h-full rounded-full object-cover border-2 border-white shadow-lg"
-            />
+            <motion.h2
+              key={currentIndex}
+              initial={{ x: -50 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-white text-[30px] font-semibold mb-2 text-center mt-5"
+            >
+              {images[currentIndex].name}
+            </motion.h2>
+            <div className="w-8/12 mx-auto">
+              <motion.p
+                key={currentIndex}
+                initial={{ x: -50 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-base md:text-[20px] font-normal leading-6 text-white text-center px-5"
+              >
+                {images[currentIndex].description}
+              </motion.p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Navigation Buttons */}
-      <div className="absolute mt-64 flex justify-center gap-4 z-20">
-        <button
-          onClick={handleNext}
-          className="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-700 transition-colors"
-        >
-          <ChevronLeft />
-        </button>
-        <button
-          onClick={handlePrev}
-          className="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-700 transition-colors"
-        >
-          <ChevronRight />
-        </button>
+        {/* Navigation Buttons */}
+        <div className="absolute mt-56 flex justify-center gap-4">
+          <button
+            onClick={handleNext}
+            className="bg-gradient-to-b from-neutral-400/10 text-white rounded-lg px-4 py-2"
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            onClick={handlePrev}
+            className="bg-gradient-to-b from-neutral-400/10 text-white rounded-lg px-4 py-2"
+          >
+            <ChevronRight />
+          </button>
+        </div>
       </div>
-      <div className="absolute w-[50%] h-[45%] bottom-32 bg-black">
-        <h2 className="text-white text-[30px] font-semibold mb-2 text-center">
-          {"Tanmay"}
-        </h2>
-        <p className="text-base md:text-[20px] font-normal leading-6 text-white text-center px-5">
-          {
-            "Developed an AI-powered soap formula that enhanced skin hydration while reducing environmental impact."
-          }
-        </p>
-      </div>
-    </div>
+    </>
   );
 };
 
