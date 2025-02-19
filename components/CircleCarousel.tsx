@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import GalaxyParticles from "./GalaxyParticles";
+import { Spotlight } from "./ui/Spotlight";
 
 const images = [
   {
@@ -109,7 +110,11 @@ const CircularImageCarousel = () => {
           </span>
         </button>
       </div>
-      <div className="relative w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0">
+      <div className="relative w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0 ">
+        <Spotlight
+          className="-top-40 left-0 md:left-[400px] md:-top-64"
+          fill="white"
+        />
         <div
           className="relative w-[600px] mx-auto flex justify-center items-center h-[600px] rounded-full "
           style={{

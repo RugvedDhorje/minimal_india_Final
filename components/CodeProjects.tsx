@@ -132,7 +132,7 @@ export default function CodeProject() {
             </span>
           </button>
         </div>
-        <div className="h-44 w-[650px] top-60 absolute z-10">
+        <div className="h-44 w-[650px] top-60 absolute z-10 ">
           <GalaxyParticles />
         </div>
         <div className="">

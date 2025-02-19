@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 export default {
   darkMode: ["class"],
@@ -9,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+      },
       fontFamily: {
         clash: ["clash", "sans-serif"],
         nunito: ["nunito", "sans-serif"],
@@ -19,6 +23,16 @@ export default {
         "999": "999",
       },
       keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
         galaxyMove: {
           "0%": {
             transform: "translateY(0) translateX(0) scale(1)",
@@ -83,6 +97,7 @@ export default {
         colorChange: "colorChange 3s infinite",
         shimmer: "shimmer 2s linear infinite",
         galaxyMove: "galaxyMove 5s infinite ease-in-out",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -133,5 +148,17 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 } satisfies Config;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

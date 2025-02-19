@@ -9,6 +9,7 @@ import { MacbookScroll } from "./ui/macbook-scroll";
 import { NavigationMenuDemo } from "./NavigationButton";
 import { useRef } from "react";
 import CircleCarousel from "./CircleCarousel";
+import About from "./About";
 
 export default function Creative() {
   const cards = data.map((card, index) => (
@@ -110,6 +111,9 @@ export default function Creative() {
           <div className="max-w-screen-2xl w-11/12 mx-auto rounded-3xl z-50">
             <FilmSection />
           </div>
+        </div>
+        <div className="z-50 w-full bg-gradient-to-b from-[#000] via-[#130C0B] to-[#0C0807]">
+          <About />
         </div>
       </div>
     </div>
