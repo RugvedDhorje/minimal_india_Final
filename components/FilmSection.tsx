@@ -19,10 +19,10 @@ export default function FilmSection() {
 
         {/* Centered Content Section */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
-          <h1 className="text-white text-[80px] font-bold leading-none">
+          <h1 className="text-white lg:text-[80px] md:text-[60px] text-[44px] font-bold leading-none">
             Stories you’ll want to replay.
           </h1>
-          <h2 className="text-white text-[40px] mt-5 leading-none">
+          <h2 className="text-white lg:text-[40px] md:text-[30px] text-[26px] mt-5 leading-none">
             Crafting moments, and leaving an impact.
           </h2>
           <button className="mt-5 text-[16px] font-normal px-4 py-2 text-[#292929] rounded-md bg-white">

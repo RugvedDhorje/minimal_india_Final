@@ -39,10 +39,10 @@ export default function Creative() {
               // transition={{ duration: 0.5 }}
               className="w-full"
             >
-              <h1 className="text-[#292929] text-[60px] mx-auto leading-none font-bold mt-14 text-center font-clash pt-[50px]">
+              <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold mt-14 text-center font-clash pt-[50px]">
                 Designs that speak louder than words
               </h1>
-              <h2 className="text-[#292929] text-[30px] mx-auto leading-none text-center font-clash mt-5">
+              <h2 className="text-[#292929] lg:text-[30px] text-[20px] mx-auto leading-none text-center font-clash mt-5">
                 From bold ideas to beautiful executions, we craft visuals that
                 inspire
               </h2>
@@ -92,10 +92,12 @@ export default function Creative() {
                   ></motion.div>
                 </motion.div>
               </div>
-              <MacbookScroll
-                src={`/1739448852325344.mp4`}
-                showGradient={false}
-              />
+              <div className="w-full hidden sm:block">
+                <MacbookScroll
+                  src={`/1739448852325344.mp4`}
+                  showGradient={false}
+                />
+              </div>
             </div>
             {/* <HorizontalScrollCarousel /> */}
           </div>

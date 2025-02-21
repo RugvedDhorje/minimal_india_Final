@@ -95,10 +95,10 @@ const CircularImageCarousel = () => {
   return (
     <>
       <motion.div className="w-full pt-5 bg-black">
-        <h1 className="text-white text-[80px] mx-auto leading-none font-bold mt-14 text-center">
+        <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
         </h1>
-        <h2 className="text-white text-[40px] mx-auto leading-none text-center mt-5">
+        <h2 className="text-white lg:text-[40px] md:text-[30px]  mx-auto leading-none text-center mt-5">
           Smart solutions for every problem
         </h2>
       </motion.div>
@@ -116,7 +116,7 @@ const CircularImageCarousel = () => {
           fill="white"
         />
         <div
-          className="relative w-[600px] mx-auto flex justify-center items-center h-[600px] rounded-full "
+          className="relative sm:w-[600px] w-[390px] mx-auto flex justify-center items-center h-[600px] rounded-full  overflow-hidden"
           style={{
             background: `linear-gradient(
           to bottom,

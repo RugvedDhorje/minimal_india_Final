@@ -30,13 +30,13 @@ export default function Services() {
           opacity: sectionOpacity, // Fades out smoothly
         }}
       >
-        <h1 className="text-center text-[90px] font-bold text-gray-900 leading-none pt-[200px] pb-[70px]">
+        <h1 className="text-center lg:text-[90px] md:text-[70px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[200px] pb-[70px]">
           Embrace the future of <br /> urban mobility
         </h1>
 
-        <div className="max-w-screen-2xl w-9/12 mx-auto flex flex-wrap mb-10 relative ">
+        <div className="max-w-screen-2xl w-9/12 mx-auto sm:flex sm:flex-wrap mb-10 relative ">
           {/* Circle in the middle */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 sm:flex items-center justify-center hidden ">
             <motion.div
               ref={circleRef}
               style={{
@@ -65,48 +65,48 @@ export default function Services() {
           </div>
 
           {/* Content Divs */}
-          <div className="w-1/2">
-            <div className="p-[100px] w-5/6 mx-auto border-r border-b border-gray-700 rounded-br-[70px]">
-              <h4 className="text-[30px] font-semibold">
+          <div className="sm:w-1/2 w-full mt-5 sm:mt-0">
+            <div className="sm:p-[100px] w-5/6 mx-auto sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
+              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
                 STRESS-FREE SERVICES
               </h4>
-              <p className="text-[18px] font-light">
+              <p className="md:text-[18px] text-[16px] font-light">
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
               </p>
             </div>
           </div>
-          <div className="w-1/2">
-            <div className="p-[100px] w-5/6 mx-auto">
-              <h4 className="text-[30px] font-semibold">
+          <div className="sm:w-1/2 w-full mt-5 sm:mt-0">
+            <div className="sm:p-[100px] w-5/6 mx-auto">
+              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
                 STRESS-FREE SERVICES
               </h4>
-              <p className="text-[18px] font-light">
+              <p className="md:text-[18px] text-[16px] font-light">
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
               </p>
             </div>
           </div>
-          <div className="w-1/2">
-            <div className="p-[100px] w-5/6 mx-auto">
-              <h4 className="text-[30px] font-semibold">
+          <div className="sm:w-1/2 w-full mt-5 sm:mt-0">
+            <div className="sm:p-[100px] w-5/6 mx-auto">
+              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
                 STRESS-FREE SERVICES
               </h4>
-              <p className="text-[18px] font-light">
+              <p className="md:text-[18px] text-[16px] font-light">
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
               </p>
             </div>
           </div>
-          <div className="w-1/2">
-            <div className="p-[100px] w-5/6 mx-auto border-l border-t border-gray-700 rounded-tl-[70px]">
-              <h4 className="text-[30px] font-semibold">
+          <div className="sm:w-1/2 w-full mt-5 sm:mt-0">
+            <div className="sm:p-[100px] w-5/6 mx-auto sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
+              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
                 STRESS-FREE SERVICES
               </h4>
-              <p className="text-[18px] font-light">
+              <p className="md:text-[18px] text-[16px] font-light">
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.

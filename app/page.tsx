@@ -19,7 +19,7 @@ export default function Home() {
           />
         </video>
       ) : (
-        <div>
+        <div className="w-full mx-auto">
           <HomePage />
           <Services />
         </div>
