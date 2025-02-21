@@ -11,8 +11,8 @@ export default function Services() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.25, 0.3], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.25, 0.3], [1, 5]);
+  const circleScale = useTransform(scrollYProgress, [0.21, 0.3], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.21, 0.3], [1, 5]);
 
   // Move the section up **after** the circle expands
   const sectionY = useTransform(scrollYProgress, [0.1, 0.5], ["0%", "-100%"]);
@@ -22,7 +22,7 @@ export default function Services() {
     <div className="relative w-full">
       {/* Sticky Section */}
       <motion.div
-        className="w-full mx-auto rounded-t-3xl overflow-hidden z-20 mt-[400px] pb-[100px]"
+        className="w-full mx-auto rounded-t-3xl overflow-hidden z-20 mt-[100px] pb-[100px]"
         style={{
           position: "sticky", // Keeps it fixed until scroll threshold
           top: 0, // Sticks to the top of the screen
@@ -34,7 +34,7 @@ export default function Services() {
           Embrace the future of <br /> urban mobility
         </h1>
 
-        <div className="max-w-screen-2xl w-9/12 mx-auto flex flex-wrap mb-10 relative">
+        <div className="max-w-screen-2xl w-9/12 mx-auto flex flex-wrap mb-10 relative ">
           {/* Circle in the middle */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
@@ -117,7 +117,7 @@ export default function Services() {
       </motion.div>
 
       {/* Creative Section (Content below animation) */}
-      <div className="w-full mx-auto rounded-t-3xl absolute top-[700px]">
+      <div className="w-full mx-auto rounded-t-3xl absolute top-[800px]">
         <Creative />
       </div>
       <div className="w-full">{/* <Slider3D /> */}</div>

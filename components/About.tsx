@@ -17,7 +17,7 @@ export default function About() {
             <EmailSubscriptionForm />
           </div>
         </div>
-        <div className="h-[500px] w-8/12 my-6 rounded-3xl bg-gradient-to-b from-black/90 to-[#001919]/90">
+        <div className="h-[500px] w-8/12 my-6 rounded-3xl bg-gradient-to-b from-black/90 to-[#001919]">
           <h2 className="text-[70px] tracking-wide font-semibold text-center mt-20 text-white">
             <span className="animate-colorChange">&quot;</span>
             The mind behind MinimalIndia.
