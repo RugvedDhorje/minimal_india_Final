@@ -110,9 +110,9 @@ const CircularImageCarousel = () => {
           </span>
         </button>
       </div>
-      <div className="relative w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0 ">
+      <div className="relative max-w-screen-2xl mx-auto w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0 ">
         <Spotlight
-          className="-top-40 left-0 md:left-[400px] md:-top-64"
+          className="-top-20 left-10  md:left-[400px] md:-top-32"
           fill="white"
         />
         <div

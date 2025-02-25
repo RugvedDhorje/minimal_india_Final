@@ -26,7 +26,7 @@ export default function HomePage() {
         <div className="inset-0 min-h-screen overflow-y-auto">
           <div
             //   ref={bgRef}
-            className="relative w-full max-w-screen-2xl mx-auto bg-gray-200 h-[140vh] bg-cover bg-center rounded-b-3xl mb-10"
+            className="relative w-full max-w-screen-2xl mx-auto bg-gray-200 bg-cover bg-center rounded-b-3xl mb-10"
             // style={{
             //   backgroundImage: `url("/homeBg.jpg")`,
             // }}

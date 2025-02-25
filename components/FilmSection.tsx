@@ -7,7 +7,7 @@ export default function FilmSection() {
       {/* Background Video Section */}
       <div className="w-full relative h-[700px] flex justify-center items-center">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full rounded-3xl bg-gray-700 overflow-hidden">
+        <div className="absolute inset-0 w-full max-w-screen-2xl h-full rounded-3xl bg-gray-700 overflow-hidden">
           <video
             src="https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4"
             autoPlay

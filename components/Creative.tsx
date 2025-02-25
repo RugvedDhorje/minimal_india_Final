@@ -20,10 +20,10 @@ export default function Creative() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.59, 0.61], [1, 150]);
+  const circleScale = useTransform(scrollYProgress, [0.56, 0.58], [1, 150]);
   const innerCircleScale = useTransform(
     scrollYProgress,
-    [0.59, 0.61],
+    [0.56, 0.58],
     [1, 100]
   );
 
@@ -31,7 +31,7 @@ export default function Creative() {
     <div id="design" className="rounded-t-3xl w-full  mx-auto bg-transparent">
       <div className="w-full">
         {/* creative section */}
-        <div className=" w-full">
+        <div className=" w-full ">
           <div className="max-w-screen-2xl w-11/12 mx-auto">
             <motion.div
               // initial={{ y: -100 }}
@@ -39,7 +39,7 @@ export default function Creative() {
               // transition={{ duration: 0.5 }}
               className="w-full"
             >
-              <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold mt-14 text-center font-clash pt-[50px]">
+              <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash ">
                 Designs that speak louder than words
               </h1>
               <h2 className="text-[#292929] lg:text-[30px] text-[20px] mx-auto leading-none text-center font-clash mt-5">
@@ -102,7 +102,7 @@ export default function Creative() {
             {/* <HorizontalScrollCarousel /> */}
           </div>
         </div>
-        <div className="z-50 w-full bg-gradient-to-b from-[#000] via-[#130C0B] to-[#0C0807]">
+        <div className="z-50 w-full bg-black">
           <CircleCarousel />
         </div>
         {/* Film making Section */}
