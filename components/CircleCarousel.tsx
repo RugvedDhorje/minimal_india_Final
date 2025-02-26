@@ -93,8 +93,8 @@ const CircularImageCarousel = () => {
   const OFFSET = CIRCLE_SIZE / 2 + IMAGE_SIZE / 2; // Distance from center to image center
 
   return (
-    <>
-      <motion.div className="w-full pt-5 bg-black">
+    <div className="w-full overflow-hidden">
+      <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 bg-black">
         <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
         </h1>
@@ -102,7 +102,7 @@ const CircularImageCarousel = () => {
           Smart solutions for every problem
         </h2>
       </motion.div>
-      <div className="w-full flex justify-center items-center bg-black py-10">
+      <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto flex justify-center items-center bg-black py-10">
         <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl">
@@ -116,7 +116,7 @@ const CircularImageCarousel = () => {
           fill="white"
         />
         <div
-          className="relative sm:w-[600px] w-[390px] mx-auto flex justify-center items-center h-[600px] rounded-full  overflow-hidden"
+          className="relative sm:w-[600px] md:w-[500px] w-[390px] mx-auto flex justify-center items-center h-[600px] rounded-full  overflow-hidden"
           style={{
             background: `linear-gradient(
           to bottom,
@@ -262,7 +262,7 @@ const CircularImageCarousel = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

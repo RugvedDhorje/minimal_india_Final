@@ -34,7 +34,7 @@ export default function FilmSection() {
       {/* Parallax Scrolling Section */}
       <Parallax translateY={[10, -100]}>
         <div className="h-auto bg-gray-200 w-full rounded-3xl">
-          <div className="">
+          <div className="w-full bg-red-400">
             <Slider />
           </div>
         </div>

@@ -102,7 +102,7 @@ export default function Creative() {
             {/* <HorizontalScrollCarousel /> */}
           </div>
         </div>
-        <div className="z-50 w-full bg-black">
+        <div className=" w-full bg-black">
           <CircleCarousel />
         </div>
         {/* Film making Section */}
