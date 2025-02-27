@@ -116,17 +116,17 @@ const CircularImageCarousel = () => {
           fill="white"
         />
         <div
-          className="relative sm:w-[600px] md:w-[500px] w-[390px] mx-auto flex justify-center items-center h-[600px] rounded-full  overflow-hidden"
-          style={{
-            background: `linear-gradient(
-          to bottom,
-          rgba(163, 163, 163, 0.7) 5%,
-          rgba(163, 163, 163, 0.4) 20%,
-          rgba(163, 163, 163, 0.2) 40%,
-          rgba(0, 0, 0, 0) 60%,
-          rgba(0, 0, 0, 0) 100%
-        )`,
-          }}
+          className="relative sm:w-[600px] md:w-[600px] w-[390px] mx-auto flex justify-center items-center h-[600px] rounded-full overflow-hidden bg-gradient-to-b from-neutral-400/20 to-transparent"
+          //   style={{
+          //     background: `linear-gradient(
+          //   to bottom,
+          //   rgba(163, 163, 163, 0.7) 5%,
+          //   rgba(163, 163, 163, 0.4) 20%,
+          //   rgba(163, 163, 163, 0.2) 40%,
+          //   rgba(0, 0, 0, 0) 60%,
+          //   rgba(0, 0, 0, 0) 100%
+          // )`,
+          //   }}
         >
           <div
             className="relative rounded-full flex justify-center items-center transition-transform duration-500"
