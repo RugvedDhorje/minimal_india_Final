@@ -164,7 +164,7 @@ export default function Navbar() {
                 to={item}
                 smooth={true}
                 duration={500}
-                className="text-[16px] font-normal uppercase text-gray-700 hover:text-black transition"
+                className="text-[16px] font-normal uppercase text-gray-700 hover:text-black transition cursor-pointer"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </Link>
