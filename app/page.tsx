@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Services from "@/components/Services";
 import { useEffect, useState } from "react";
@@ -44,6 +45,7 @@ export default function Home() {
         <div className="w-full mx-auto">
           <HomePage />
           <Services />
+          <Footer />
         </div>
       )}
     </>
