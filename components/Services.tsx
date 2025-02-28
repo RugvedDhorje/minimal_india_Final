@@ -19,10 +19,10 @@ export default function Services() {
   // const sectionOpacity = useTransform(scrollYProgress, [0.25, 0.3], [1, 0]);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-auto overflow-y-auto snap-y snap-mandatory">
       {/* Sticky Section */}
       <motion.div
-        className="w-full mx-auto rounded-t-3xl overflow-hidden z-20 mt-[100px] pb-[100px]"
+        className="w-full mx-auto rounded-t-3xl overflow-hidden z-20 mt-[100px] pb-[100px] snap-end"
         // style={{
         //   position: "sticky", // Keeps it fixed until scroll threshold
         //   top: 0, // Sticks to the top of the screen
@@ -117,7 +117,7 @@ export default function Services() {
       </motion.div>
 
       {/* Creative Section (Content below animation) */}
-      <div className="w-full mx-auto rounded-t-3xl  ">
+      <div className="w-full mx-auto rounded-t-3xl snap-end ">
         <Creative />
       </div>
     </div>
