@@ -48,7 +48,6 @@ export default function Services() {
                 scale: circleScale,
                 justifyContent: "center",
                 alignItems: "center",
-                zIndex: 999,
               }}
             >
               <motion.div

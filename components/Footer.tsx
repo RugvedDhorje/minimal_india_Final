@@ -8,7 +8,7 @@ const Footer = () => {
           Get in touch
         </p>
         <p className="text-[20px] font-light text-black  tracking-wider">
-          Minimal india
+          MINIMAL INDIA
         </p>
       </div>
     </div>

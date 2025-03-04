@@ -98,7 +98,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           onScroll={checkScrollability}
         >
           {/* Left Gradient Overlay */}
-          <div className="absolute top-0 left-0 h-full w-[10%] pointer-events-none z-20 bg-gradient-to-r from-white via-white to-transparent pl-5"></div>
+          <div className="absolute top-0 left-0 h-full w-[30%] pointer-events-none z-20 bg-gradient-to-r from-white to-transparent pl-5"></div>
 
           {/* Right Gradient Overlay */}
           <div className="absolute top-0 right-0 h-full w-[30%] pointer-events-none z-20 bg-gradient-to-l from-white to-transparent pr-5"></div>
@@ -111,7 +111,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-4",
+              "flex flex-row justify-start gap-5",
               " mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
             )}
           >
@@ -203,7 +203,7 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
+          <div className="fixed inset-0 h-screen z-50 ">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -244,7 +244,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[20rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 h-80 w-56 md:h-[20rem] md:w-[500px] overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">

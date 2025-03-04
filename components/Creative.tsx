@@ -7,7 +7,7 @@ import FilmSection from "./FilmSection";
 // import CodeProject from "./CodeProjects";
 import { MacbookScroll } from "./ui/macbook-scroll";
 import { NavigationMenuDemo } from "./NavigationButton";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import CircleCarousel from "./CircleCarousel";
 import About from "./About";
 
@@ -17,6 +17,8 @@ export default function Creative() {
   ));
   const circleRef = useRef(null);
   const innerCircleRef = useRef(null);
+  const techSectionRef = useRef<HTMLDivElement | null>(null);
+  const nextDivRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
@@ -26,6 +28,22 @@ export default function Creative() {
     [0.56, 0.58],
     [1, 100]
   );
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!techSectionRef.current || !nextDivRef.current) return;
+
+      const sectionTop = techSectionRef.current.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight * 0.1) {
+        nextDivRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div id="design" className="rounded-t-3xl w-full  mx-auto bg-transparent">
@@ -60,7 +78,7 @@ export default function Creative() {
             {/* <TechSection /> */}
             <div
               id="tech"
-              className="overflow-hidden dark:bg-[#0B0B0F] w-full relative"
+              className="overflow-hidden dark:bg-[#0B0B0F] w-full relative overflow-y-auto snap-y snap-mandatory"
             >
               <div className="absolute inset-0 flex justify-center -z-10 pt-[500px]">
                 <motion.div
@@ -92,7 +110,7 @@ export default function Creative() {
                   ></motion.div>
                 </motion.div>
               </div>
-              <div className="w-full hidden sm:block">
+              <div className="w-full hidden sm:block snap-end">
                 <MacbookScroll
                   src={`/1739448852325344.mp4`}
                   showGradient={false}
@@ -102,7 +120,7 @@ export default function Creative() {
             {/* <HorizontalScrollCarousel /> */}
           </div>
         </div>
-        <div className=" w-full bg-black">
+        <div ref={nextDivRef} className=" w-full bg-black">
           <CircleCarousel />
         </div>
         {/* Film making Section */}
@@ -159,19 +177,19 @@ const data = [
   {
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
-    src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/21 DESIGN MINIMAL INDIAN .jpg",
     content: <DummyContent />,
   },
   {
     category: "Productivity",
     title: "Enhance your productivity.",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/CARD 30 DESIGN MINIMAL INDIAN  copy.jpg",
     content: <DummyContent />,
   },
   {
     category: "Product",
     title: "Launching the new Apple Vision Pro.",
-    src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/CARD 9 DESIGN MINIMAL INDIAN .jpg",
     content: <DummyContent />,
   },
 

@@ -700,20 +700,6 @@ import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 // import Image from "next/image";
 
-// Utility function to merge refs
-function mergeRefs<T>(...refs: (React.Ref<T> | null)[]) {
-  return (node: T | null) => {
-    refs.forEach((ref) => {
-      if (!ref) return;
-      if (typeof ref === "function") {
-        ref(node); // ✅ TypeScript now understands this
-      } else if (ref && "current" in ref) {
-        (ref as React.MutableRefObject<T | null>).current = node;
-      }
-    });
-  };
-}
-
 export const MacbookScroll = ({
   src,
   showGradient,
@@ -751,40 +737,10 @@ export const MacbookScroll = ({
   );
   const translate = useTransform(scrollYProgress, [0, 1], [0, 1500]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!hasScrolled) {
-        setHasScrolled(true);
-
-        // Scroll to the bottom smoothly
-        if (containerRef.current) {
-          containerRef.current.scrollTo({
-            top: containerRef.current.scrollHeight,
-            behavior: "auto",
-          });
-        }
-      }
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [hasScrolled]);
 
   return (
     <div
-      // ref={ref}
-      ref={mergeRefs(ref, containerRef)}
+      ref={ref}
       className="lg:min-h-[200vh] sm:min-h-[150vh] flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
     >
       {/* Lid */}
