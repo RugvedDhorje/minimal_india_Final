@@ -127,7 +127,7 @@ export default function Creative() {
                   ></motion.div>
                 </motion.div>
               </div>
-              <div className="w-full hidden sm:block snap-end">
+              <div className="w-full hidden sm:block snap-end overflow-hidden">
                 <MacbookScroll
                   src={`/1739448852325344.mp4`}
                   showGradient={false}

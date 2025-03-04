@@ -158,13 +158,18 @@ export default function Navbar() {
             "linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)",
         }}
       >
-        <div className="bg-white shadow-md rounded-xl px-6 py-3 flex justify-between items-center sm:w-8/12 w-11/12 max-w-[900px]">
+        <div className="bg-white shadow-md rounded-xl px-6 py-3 flex justify-between items-center sm:w-8/12 w-11/12 max-w-[900px] overflow-hidden">
           {/* Logo */}
           <div className="text-2xl font-bold text-gray-800">
             <Link to="home" smooth={true} duration={500}>
-              <h2 className="text-black font-extralight lg:text-[30px] md:text-[24px] text-[20px] cursor-pointer">
+              <motion.h2
+                initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-black font-extralight lg:text-[30px] md:text-[24px] text-[20px] cursor-pointer"
+              >
                 MINIMAL INDIA
-              </h2>
+              </motion.h2>
             </Link>
           </div>
 
@@ -184,9 +189,14 @@ export default function Navbar() {
           </ul>
 
           {/* Get In Touch Button */}
-          <button className="hidden lg:block text-[16px] font-normal uppercase px-4 py-2 border border-gray-700 rounded-xl text-gray-700 hover:bg-gray-700 hover:text-white transition">
+          <motion.button
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="hidden lg:block text-[16px] font-normal uppercase px-4 py-2 border border-gray-700 rounded-xl text-gray-700 hover:bg-gray-700 hover:text-white transition"
+          >
             Get In Touch
-          </button>
+          </motion.button>
 
           {/* Mobile Menu Toggle */}
           <button onClick={() => setNavOpen(!navOpen)} className="lg:hidden">
