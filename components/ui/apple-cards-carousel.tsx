@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import ImageGrid from "../ImageGrid";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -37,36 +38,20 @@ export const CarouselContext = createContext<{
   currentIndex: 0,
 });
 
-export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
+export const Carousel = ({ items }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
-  const [canScrollRight, setCanScrollRight] = React.useState(true);
+
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollLeft = initialScroll;
-      checkScrollability();
-    }
-  }, [initialScroll]);
-
-  const checkScrollability = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
-    }
-  };
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: -500, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: 500, behavior: "smooth" });
     }
   };
 
@@ -95,7 +80,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto  scroll-smooth [scrollbar-width:none]"
           ref={carouselRef}
-          onScroll={checkScrollability}
+          // onScroll={checkScrollability}
         >
           {/* Left Gradient Overlay */}
           <div className="absolute top-0 left-0 h-full w-[30%] pointer-events-none z-20 bg-gradient-to-r from-white to-transparent pl-5"></div>
@@ -139,16 +124,16 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
           <button
-            className=" z-40 h-10 w-10 left-1 rounded-full bottom-[150px] bg-gray-100 bg-opacity-20 flex items-center justify-center disabled:opacity-50 absolute"
+            className=" z-40 h-10 w-10 left-1 rounded-full bottom-[150px] bg-gray-500 bg-opacity-20 flex items-center justify-center disabled:opacity-50 absolute"
             onClick={scrollLeft}
-            disabled={!canScrollLeft}
+            // disabled={!canScrollLeft}
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
           </button>
           <button
-            className="absolute right-1 bottom-[150px] z-40 h-10 w-10 rounded-full bg-gray-100 bg-opacity-20 flex items-center justify-center disabled:opacity-50"
+            className="absolute right-1 bottom-[150px] z-40 h-10 w-10 rounded-full bg-gray-500 bg-opacity-20 flex items-center justify-center disabled:opacity-50"
             onClick={scrollRight}
-            disabled={!canScrollRight}
+            // disabled={!canScrollRight}
           >
             <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
           </button>
@@ -203,12 +188,12 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 ">
+          <div className="fixed inset-0 h-screen z-50">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="bg-black/10 backdrop-blur-md h-full w-full fixed inset-0"
+              className="bg-black/70 backdrop-blur-md h-full w-full fixed inset-0"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -216,27 +201,24 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="max-w-5xl mx-auto bg-white h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
             >
               <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
+                className="sticky top-4 h-8 w-8 right-0 ml-auto mb-3 bg-black rounded-full flex items-center justify-center"
                 onClick={handleClose}
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
-              >
-                {card.category}
-              </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
-              >
-                {card.title}
-              </motion.p>
-              <div className="py-10">{card.content}</div>
+
+              {/* ✅ Ensure only string URLs are passed to ImageGrid */}
+              <ImageGrid
+                card={{
+                  ...card,
+                  content: Array.isArray(card.content)
+                    ? card.content.filter((item) => typeof item === "string")
+                    : [],
+                }}
+              />
             </motion.div>
           </div>
         )}
@@ -244,19 +226,25 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 h-80 w-56 md:h-[20rem] md:w-[500px] overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl h-80 w-56 md:h-[20rem] md:w-[500px] overflow-hidden flex flex-col items-start justify-start relative z-10 group"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
           <motion.p
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.9 }}
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left bgye"
+            className="text-black text-sm md:text-base font-medium font-sans text-left hidden group-hover:block"
           >
             {card.category}
           </motion.p>
           <motion.p
+            initial={{ x: 150 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.9 }}
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
+            className="text-black text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2 hidden group-hover:block"
           >
             {card.title}
           </motion.p>
@@ -265,7 +253,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="object-cover absolute z-10 inset-0"
+          className="object-cover absolute z-10 inset-0 group-hover:opacity-40"
         />
       </motion.button>
     </>

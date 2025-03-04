@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import GalaxyParticles from "./GalaxyParticles";
 import { Spotlight } from "./ui/Spotlight";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 const images = [
   {
@@ -89,27 +90,50 @@ const CircularImageCarousel = () => {
   };
 
   const CIRCLE_SIZE = 300; // Main circle size
-  const IMAGE_SIZE = 100; // Image size
+  const IMAGE_SIZE = 150; // Image size
   const OFFSET = CIRCLE_SIZE / 2 + IMAGE_SIZE / 2; // Distance from center to image center
+  const words = [
+    {
+      text: "Code",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Clarity.",
+      className: "text-blue-500/60",
+    },
+  ];
 
   return (
     <div className="w-full overflow-hidden">
-      <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 bg-black">
-        <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
+      <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 bg-black flex flex-col justify-center items-center">
+        {/* <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
-        </h1>
-        <h2 className="text-white lg:text-[40px] md:text-[30px]  mx-auto leading-none text-center mt-5">
+        </h1> */}
+        <TypewriterEffectSmooth words={words} />
+        <motion.h2
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-white lg:text-[40px] md:text-[30px]  mx-auto leading-none text-center mt-5"
+        >
           Smart solutions for every problem
-        </h2>
+        </motion.h2>
       </motion.div>
-      <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto flex justify-center items-center bg-black py-10">
+      <motion.div
+        initial={{ x: -150 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto flex justify-center items-center bg-black py-10"
+      >
         <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl">
             Discover Tech
           </span>
         </button>
-      </div>
+      </motion.div>
       <div className="relative max-w-screen-2xl mx-auto w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0 ">
         <Spotlight
           className="-top-20 left-10  md:left-[400px] md:-top-32"
@@ -129,7 +153,7 @@ const CircularImageCarousel = () => {
           //   }}
         >
           <div
-            className="relative rounded-full flex justify-center items-center transition-transform duration-500"
+            className="relative rounded-full flex justify-center items-center transition-transform duration-500 mt-12"
             style={{
               width: `${CIRCLE_SIZE}px`,
               height: `${CIRCLE_SIZE}px`,
@@ -178,6 +202,7 @@ const CircularImageCarousel = () => {
                 transform: `rotate(${-rotation}deg) translateY(${OFFSET}px)`,
                 width: `${IMAGE_SIZE}px`,
                 height: `${IMAGE_SIZE}px`,
+                opacity: "0",
               }}
             >
               <img
@@ -212,12 +237,12 @@ const CircularImageCarousel = () => {
             <GalaxyParticles />
           </div>
           <div
-            className="absolute w-[150%] h-[60%] bottom-10 bg-black"
+            className="absolute w-[150%] h-[70%] bottom-0 bg-black"
             style={{
               background: `linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 1) 15%,
+            rgba(0, 0, 0, 1) 10%,
             rgba(0, 0, 0, 1) 40%,
             rgba(0, 0, 0, 1) 100%
           )`,
@@ -226,7 +251,7 @@ const CircularImageCarousel = () => {
             <motion.h2
               key={currentIndex}
               initial={{ x: -50 }}
-              animate={{ x: 0 }}
+              whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
               className="text-white text-[30px] font-semibold mb-2 text-center mt-5"
             >
@@ -236,7 +261,7 @@ const CircularImageCarousel = () => {
               <motion.p
                 key={currentIndex}
                 initial={{ x: -50 }}
-                animate={{ x: 0 }}
+                whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-base md:text-[20px] font-normal leading-6 text-white text-center px-5"
               >
@@ -248,18 +273,24 @@ const CircularImageCarousel = () => {
 
         {/* Navigation Buttons */}
         <div className="absolute mt-56 flex justify-center gap-4">
-          <button
-            onClick={handleNext}
-            className="bg-gradient-to-b from-neutral-400/10 text-white rounded-lg px-4 py-2"
-          >
-            <ChevronLeft />
-          </button>
-          <button
+          <motion.button
+            initial={{ x: -50 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.5 }}
             onClick={handlePrev}
             className="bg-gradient-to-b from-neutral-400/10 text-white rounded-lg px-4 py-2"
           >
+            <ChevronLeft />
+          </motion.button>
+          <motion.button
+            initial={{ x: 50 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            onClick={handleNext}
+            className="bg-gradient-to-b from-neutral-400/10 text-white rounded-lg px-4 py-2"
+          >
             <ChevronRight />
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>

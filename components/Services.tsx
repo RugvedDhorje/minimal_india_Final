@@ -30,9 +30,14 @@ export default function Services() {
         //   opacity: sectionOpacity, // Fades out smoothly
         // }}
       >
-        <h1 className="text-center lg:text-[90px] md:text-[70px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[100px] pb-[70px]">
+        <motion.h1
+          initial={{ y: -200 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center lg:text-[90px] md:text-[70px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[100px] pb-[70px]"
+        >
           Embrace the future of <br /> urban mobility
-        </h1>
+        </motion.h1>
 
         <div className="max-w-screen-2xl w-9/12 sm:w-full lg:w-9/12 mx-auto sm:flex sm:flex-wrap mb-10 relative ">
           {/* Circle in the middle */}
@@ -58,6 +63,7 @@ export default function Services() {
                   borderRadius: "50%",
                   backgroundColor: "white",
                   scale: innerCircleScale,
+                  zIndex: 999,
                 }}
               ></motion.div>
             </motion.div>
@@ -66,50 +72,90 @@ export default function Services() {
           {/* Content Divs */}
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
             <div className="lg:p-[100px] md:p-[80px] w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
-              <h4 className="md:text-[30px] text-[24px] text-center font-semibold mb-2">
+              <motion.h4
+                initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:text-[30px] text-[24px] text-center font-semibold mb-2"
+              >
                 STRESS-FREE SERVICES
-              </h4>
-              <p className="md:text-[18px] text-[16px] font-light">
+              </motion.h4>
+              <motion.p
+                initial={{ x: -150 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:text-[18px] text-[16px] font-light"
+              >
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
             <div className="lg:p-[100px] md:p-[80px] w-5/6 md:w-full lg:w-5/6 mx-auto ">
-              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
+              <motion.h4
+                initial={{ x: 100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:text-[30px] text-[24px] text-center font-semibold"
+              >
                 STRESS-FREE SERVICES
-              </h4>
-              <p className="md:text-[18px] text-[16px] font-light">
+              </motion.h4>
+              <motion.p
+                initial={{ x: 150 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:text-[18px] text-[16px] font-light"
+              >
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
             <div className="sm:p-[100px] w-5/6 md:w-full lg:w-5/6 mx-auto">
-              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
+              <motion.h4
+                initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:text-[30px] text-[24px] text-center font-semibold"
+              >
                 STRESS-FREE SERVICES
-              </h4>
-              <p className="md:text-[18px] text-[16px] font-light">
+              </motion.h4>
+              <motion.p
+                initial={{ x: -150 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:text-[18px] text-[16px] font-light"
+              >
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
             <div className="lg:p-[100px] md:p-[80px] m-5 w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
-              <h4 className="md:text-[30px] text-[24px] text-center font-semibold">
+              <motion.h4
+                initial={{ x: 100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+                className="md:text-[30px] text-[24px] text-center font-semibold"
+              >
                 STRESS-FREE SERVICES
-              </h4>
-              <p className="md:text-[18px] text-[16px] font-light">
+              </motion.h4>
+              <motion.p
+                initial={{ x: 150 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 0.3 }}
+                className="md:text-[18px] text-[16px] font-light"
+              >
                 Unlock effortless mobility—from seamless registration to
                 all-inclusive maintenance, we handle the details so you enjoy
                 the ride.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import GalaxyParticles from "./GalaxyParticles";
+import { TextRevealCard } from "./ui/text-reveal-card";
 
 interface Project {
   id: number;
@@ -116,9 +117,13 @@ export default function CodeProject() {
   return (
     <>
       <motion.div className="w-full pt-5">
-        <h1 className="text-white text-[80px] mx-auto leading-none font-bold mt-14 text-center">
+        <TextRevealCard
+          text="Write clean and concise code"
+          revealText="Code with clarity "
+        />
+        {/* <h1 className="text-white text-[80px] mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
-        </h1>
+        </h1> */}
         <h2 className="text-white text-[40px] mx-auto leading-none text-center mt-5">
           Smart solutions for every problem
         </h2>
