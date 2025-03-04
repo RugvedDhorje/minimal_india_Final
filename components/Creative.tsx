@@ -10,6 +10,7 @@ import { MacbookScroll } from "./ui/macbook-scroll";
 import { useEffect, useRef } from "react";
 import CircleCarousel from "./CircleCarousel";
 import About from "./About";
+// import { CompanyLogo } from "./CompanyLogos";
 
 export default function Creative() {
   const cards = data.map((card, index) => (
@@ -148,6 +149,7 @@ export default function Creative() {
             <FilmSection />
           </div>
         </div>
+
         <div className="z-50 w-full bg-gradient-to-b from-[#000] via-[#130C0B] to-[#0C0807]">
           <About />
         </div>
@@ -195,12 +197,13 @@ const data = [
     title: "You can do more with AI.",
     src: "/21 DESIGN MINIMAL INDIAN .jpg",
     content: [
-      "/img1 (1).jpg",
-      "/img2.jpg",
-      "/img3.jpg",
-      "/img1 (1).jpg",
-      "/img4.png",
-      "/img2.jpg",
+      "/set 3/20 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/16 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/17 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/18 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/19 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/22 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/23 DESIGN MINIMAL INDIAN .jpg",
     ],
   },
   {
@@ -208,10 +211,11 @@ const data = [
     title: "Enhance your productivity.",
     src: "/CARD 30 DESIGN MINIMAL INDIAN  copy.jpg",
     content: [
-      "/img1 (1).jpg",
-      "/img2.jpg",
-      "/img3.jpg",
-      "/img1 (1).jpg",
+      "/set 1/14 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/15 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/30 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/31 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/32 DESIGN MINIMAL INDIAN .jpg",
       "/img4.png",
       "/img2.jpg",
     ],
@@ -221,26 +225,26 @@ const data = [
     title: "Launching the new Apple Vision Pro.",
     src: "/CARD 9 DESIGN MINIMAL INDIAN .jpg",
     content: [
-      "/img1 (1).jpg",
-      "/img2.jpg",
-      "/img3.jpg",
-      "/img1 (1).jpg",
-      "/img4.png",
-      "/img2.jpg",
+      "/set 4/4 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/5 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/6 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/7 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/10 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/11 DESIGN MINIMAL INDIAN .jpg",
     ],
   },
 
   {
     category: "Product",
     title: "Maps for your iPhone 15 Pro Max.",
-    src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "/set 2/26 DESIGN MINIMAL INDIAN .jpg",
     content: [
-      "/img1 (1).jpg",
-      "/img2.jpg",
-      "/img3.jpg",
-      "/img1 (1).jpg",
-      "/img4.png",
-      "/img2.jpg",
+      "/set 2/1 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/2 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/26 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/24 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/27 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/25 DESIGN MINIMAL INDIAN .jpg",
     ],
   },
   {
