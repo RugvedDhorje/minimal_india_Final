@@ -23,12 +23,8 @@ export default function Creative() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.56, 0.58], [1, 150]);
-  const innerCircleScale = useTransform(
-    scrollYProgress,
-    [0.56, 0.58],
-    [1, 100]
-  );
+  const circleScale = useTransform(scrollYProgress, [0.5, 0.53], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.5, 0.53], [1, 100]);
 
   useEffect(() => {
     const handleScroll = () => {

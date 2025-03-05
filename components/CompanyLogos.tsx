@@ -10,7 +10,7 @@ export function CompanyLogo() {
       >
         Trusted by Industry Leaders
       </motion.h4>
-      <div className="w-full mx-auto flex items-center justify-evenly gap-x-3 py-6 bg-black rounded-full overflow-hidden">
+      <div className="w-11/12 mx-auto flex items-center justify-evenly gap-x-3 py-6 bg-black rounded-full overflow-hidden">
         <motion.img
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in

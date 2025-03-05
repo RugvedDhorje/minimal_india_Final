@@ -153,7 +153,8 @@ const CircularImageCarousel = () => {
           //   }}
         >
           <div
-            className="relative rounded-full flex justify-center items-center transition-transform duration-500 mt-12"
+            className="relative rounded-full flex justify-center items-center transition-transform duration-500 mt-10
+            "
             style={{
               width: `${CIRCLE_SIZE}px`,
               height: `${CIRCLE_SIZE}px`,
