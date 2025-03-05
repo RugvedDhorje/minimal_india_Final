@@ -1,7 +1,9 @@
 "use client";
+// import Creative from "@/components/Creative";
 import Footer from "@/components/Footer";
-import HomePage from "@/components/HomePage";
-import Services from "@/components/Services";
+// import HomePage from "@/components/HomePage";
+import { SecondSec } from "@/components/SecondSec";
+// import Services from "@/components/Services";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -43,8 +45,9 @@ export default function Home() {
         </video>
       ) : (
         <div className="w-full mx-auto">
-          <HomePage />
-          <Services />
+          {/* <HomePage /> */}
+          <SecondSec />
+
           <Footer />
         </div>
       )}

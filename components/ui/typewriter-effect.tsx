@@ -127,7 +127,7 @@ export const TypewriterEffectSmooth = ({
                 <span
                   key={`char-${index}`}
                   className={cn(
-                    `text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center `,
+                    `text-white lg:text-[60px] text-[50px]  mx-auto leading-none font-bold mt-7 text-center `,
                     word.className
                   )}
                 >
@@ -143,7 +143,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-6", className)}>
+    <div className={cn("flex space-x-1 my-2", className)}>
       <motion.div
         className="overflow-hidden pb-2"
         initial={{

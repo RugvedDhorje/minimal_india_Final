@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 // import About from "./About";
-import Creative from "./Creative";
+// import Creative from "./Creative";
 // import Slider3D from "./Slider3D";
 
 export default function Services() {
@@ -11,18 +11,18 @@ export default function Services() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.19, 0.3], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.19, 0.3], [1, 5]);
+  const circleScale = useTransform(scrollYProgress, [0, 0.1], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0, 0.1], [1, 5]);
 
   // Move the section up **after** the circle expands
   // const sectionY = useTransform(scrollYProgress, [0.1, 0.5], ["0%", "-100%"]);
   // const sectionOpacity = useTransform(scrollYProgress, [0.25, 0.3], [1, 0]);
 
   return (
-    <div className="relative w-full h-auto overflow-y-auto snap-y snap-mandatory">
+    <>
       {/* Sticky Section */}
       <motion.div
-        className="w-full mx-auto rounded-t-3xl overflow-hidden z-20 mt-[100px] pb-[100px] snap-end"
+        className="w-full mx-auto rounded-t-3xl h-screen overflow-hidden z-20 pb-[100px] snap-end bg-yellow-300"
         // style={{
         //   position: "sticky", // Keeps it fixed until scroll threshold
         //   top: 0, // Sticks to the top of the screen
@@ -34,12 +34,12 @@ export default function Services() {
           initial={{ y: -200 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center lg:text-[90px] md:text-[70px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[100px] pb-[70px]"
+          className="text-center lg:text-[75px] md:text-[60px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[20px] pb-[70px]"
         >
           Embrace the future of <br /> urban mobility
         </motion.h1>
 
-        <div className="max-w-screen-2xl w-9/12 sm:w-full lg:w-9/12 mx-auto sm:flex sm:flex-wrap mb-10 relative ">
+        <div className="max-w-screen-2xl w-9/12 sm:w-full lg:w-9/12 mx-auto sm:flex sm:flex-wrap relative ">
           {/* Circle in the middle */}
           <div className="absolute inset-0 sm:flex items-center justify-center hidden ">
             <motion.div
@@ -70,8 +70,8 @@ export default function Services() {
           </div>
 
           {/* Content Divs */}
-          <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
-            <div className="lg:p-[100px] md:p-[80px] w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
+          <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
+            <div className="lg:p-[70px] md:p-[50px] w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
               <motion.h4
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
@@ -93,7 +93,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
-            <div className="lg:p-[100px] md:p-[80px] w-5/6 md:w-full lg:w-5/6 mx-auto ">
+            <div className="lg:p-[70px] md:p-[50px] w-5/6 md:w-full lg:w-5/6 mx-auto ">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
@@ -115,7 +115,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="sm:p-[100px] w-5/6 md:w-full lg:w-5/6 mx-auto">
+            <div className="sm:p-[70px] w-5/6 md:w-full lg:w-5/6 mx-auto">
               <motion.h4
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
@@ -137,7 +137,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="lg:p-[100px] md:p-[80px] m-5 w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
+            <div className="lg:p-[70px] md:p-[50px] m-5 w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
@@ -162,9 +162,9 @@ export default function Services() {
       </motion.div>
 
       {/* Creative Section (Content below animation) */}
-      <div className="w-full mx-auto rounded-t-3xl snap-end ">
+      {/* <div className="w-full mx-auto rounded-t-3xl snap-end ">
         <Creative />
-      </div>
-    </div>
+      </div> */}
+    </>
   );
 }

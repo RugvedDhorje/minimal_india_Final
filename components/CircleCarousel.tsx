@@ -106,8 +106,8 @@ const CircularImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden">
-      <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 bg-black flex flex-col justify-center items-center">
+    <div className="w-full overflow-hidden h-screen bg-black">
+      <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 flex flex-col justify-center items-center mt-20">
         {/* <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
         </h1> */}
@@ -116,7 +116,7 @@ const CircularImageCarousel = () => {
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-white lg:text-[40px] md:text-[30px]  mx-auto leading-none text-center mt-5"
+          className="text-white lg:text-[30px] md:text-[20px]  mx-auto leading-none text-center"
         >
           Smart solutions for every problem
         </motion.h2>
@@ -125,16 +125,16 @@ const CircularImageCarousel = () => {
         initial={{ x: -150 }}
         whileInView={{ x: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto flex justify-center items-center bg-black py-10"
+        className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto flex justify-center items-center py-4"
       >
-        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
+        <button className="relative inline-flex h-10 my-4 overflow-hidden rounded-full p-[2px] focus:outline-none">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl">
             Discover Tech
           </span>
         </button>
       </motion.div>
-      <div className="relative max-w-screen-2xl mx-auto w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0 ">
+      <div className="relative max-w-screen-2xl mx-auto w-full h-auto flex items-center justify-center z-0 ">
         <Spotlight
           className="-top-20 left-10  md:left-[400px] md:-top-32"
           fill="white"
@@ -273,7 +273,7 @@ const CircularImageCarousel = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="absolute mt-56 flex justify-center gap-4">
+        <div className="absolute mt-40 flex justify-center gap-4">
           <motion.button
             initial={{ x: -50 }}
             whileInView={{ x: 0 }}

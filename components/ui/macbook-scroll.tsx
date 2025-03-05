@@ -1405,7 +1405,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="lg:min-h-[120vh] sm:min-h-[150vh] flex flex-col items-center py-0 md:py-40 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50 overflow-hidden"
+      className="lg:h-screen sm:h-screen flex flex-col items-center py-0 md:py-40 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50 overflow-hidden"
     >
       {/* Lid */}
       <Lid
