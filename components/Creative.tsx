@@ -23,8 +23,12 @@ export default function Creative() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.5, 0.53], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.5, 0.53], [1, 100]);
+  const circleScale = useTransform(scrollYProgress, [0.45, 0.47], [1, 150]);
+  const innerCircleScale = useTransform(
+    scrollYProgress,
+    [0.45, 0.47],
+    [1, 100]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,14 +132,13 @@ export default function Creative() {
                   src={`/1739448852325344.mp4`}
                   showGradient={false}
                 />
+                <CircleCarousel />
               </div>
             </div>
             {/* <HorizontalScrollCarousel /> */}
           </div>
         </div>
-        <div ref={nextDivRef} className=" w-full bg-black">
-          <CircleCarousel />
-        </div>
+        <div ref={nextDivRef} className=" w-full bg-black"></div>
         {/* Film making Section */}
         <div
           id="film"

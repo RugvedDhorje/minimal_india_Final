@@ -130,7 +130,7 @@ const ImageGrid: React.FC<CardProps> = ({ card }) => {
           <img
             src={displayImages[layout.index]}
             alt={`${card.title} image ${layout.index + 1}`}
-            className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
           />
         </motion.div>
       ))}
