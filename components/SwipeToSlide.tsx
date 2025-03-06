@@ -437,8 +437,7 @@ const info = [
     id: 1,
     title: "Title 1",
     Profile: "/images/1696858826722.jpg",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
+    video: "/WhatsApp Video 2025-03-06 at 1.20.25 PM.mp4",
     description:
       "A leading company that specializes in providing advanced technology and sustainable practices to solve modern challenges.",
     companyName: "Acme Corporation",
@@ -574,11 +573,23 @@ function MultipleItems() {
         {info.map((item) => (
           <div
             key={item.id}
-            className="px-2"
+            className="px-2 group flex justify-center items-center"
             onClick={() => handleCardClick(item)}
           >
+            <motion.h4
+              initial={{ x: 100 }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-white absolute text-[32px] hidden group-hover:block pl-[150px] top-[100px]"
+            >
+              Yezdi
+            </motion.h4>
+            {/* Centered Name */}
+            <h4 className="text-white absolute text-[32px] hidden group-hover:flex items-center justify-center w-full h-full">
+              Name
+            </h4>
             <div
-              className="relative h-72 rounded-lg overflow-hidden cursor-pointer"
+              className="relative h-72 rounded-lg overflow-hidden cursor-pointer bg-black hover:opacity-20"
               style={{
                 backgroundImage: `url(${item.Profile})`,
                 backgroundSize: "cover",
@@ -586,11 +597,6 @@ function MultipleItems() {
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <div
-                className={`absolute inset-0 bg-black transition-opacity duration-300 ${
-                  hoveredCard === item.id ? "opacity-0" : "opacity-50"
-                }`}
-              ></div>
               <video
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
                   hoveredCard === item.id ? "block" : "hidden"

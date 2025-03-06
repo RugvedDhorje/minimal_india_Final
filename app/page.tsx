@@ -1,4 +1,5 @@
 "use client";
+import Creative from "@/components/Creative";
 import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Services from "@/components/Services";
@@ -45,6 +46,7 @@ export default function Home() {
         <div className="w-full mx-auto">
           <HomePage />
           <Services />
+          <Creative />
           <Footer />
         </div>
       )}
