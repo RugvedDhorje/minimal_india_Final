@@ -448,8 +448,7 @@ const info = [
     id: 2,
     title: "Title 2",
     Profile: "/images/4611023cdfc1d96c5bc7486cdc08ada9.png",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
+    video: "/flim video-2.mp4",
     description:
       "Experts in digital transformation, offering services like software development and cloud solutions to drive business success.",
     companyName: "TechNest Solutions",
