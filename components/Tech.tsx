@@ -9,10 +9,10 @@ export function Tech() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.45, 0.47], [1, 150]);
+  const circleScale = useTransform(scrollYProgress, [0.44, 0.46], [1, 150]);
   const innerCircleScale = useTransform(
     scrollYProgress,
-    [0.45, 0.47],
+    [0.44, 0.46],
     [1, 100]
   );
 
