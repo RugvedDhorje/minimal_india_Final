@@ -139,22 +139,9 @@ const CircularImageCarousel = () => {
           className="-top-20 left-10  md:left-[400px] md:-top-32"
           fill="white"
         />
-        <div
-          className="relative sm:w-[600px] md:w-[600px] w-[390px] mx-auto flex justify-center items-center h-[600px] rounded-full overflow-hidden bg-gradient-to-b from-neutral-400/20 to-transparent"
-          //   style={{
-          //     background: `linear-gradient(
-          //   to bottom,
-          //   rgba(163, 163, 163, 0.7) 5%,
-          //   rgba(163, 163, 163, 0.4) 20%,
-          //   rgba(163, 163, 163, 0.2) 40%,
-          //   rgba(0, 0, 0, 0) 60%,
-          //   rgba(0, 0, 0, 0) 100%
-          // )`,
-          //   }}
-        >
+        <div className="relative sm:w-[600px] md:w-[700px] w-[390px] mx-auto flex justify-center items-center sm:h-[600px] h-[400px] md:h-[700px] rounded-full overflow-hidden bg-gradient-to-b from-neutral-400/20 to-transparent">
           <div
-            className="relative rounded-full flex justify-center items-center transition-transform duration-500 mt-10
-            "
+            className="relative rounded-full flex justify-center items-center transition-transform duration-500 lg:-mt-5 sm:mt-0 mt-56"
             style={{
               width: `${CIRCLE_SIZE}px`,
               height: `${CIRCLE_SIZE}px`,
@@ -254,7 +241,7 @@ const CircularImageCarousel = () => {
               initial={{ x: -50 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white text-[30px] font-semibold mb-2 text-center mt-5"
+              className="text-white sm:text-[36px] text-[24px] font-semibold mb-2 text-center sm:mt-5 mt-10"
             >
               {images[currentIndex].name}
             </motion.h2>
@@ -264,7 +251,7 @@ const CircularImageCarousel = () => {
                 initial={{ x: -50 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-base md:text-[20px] font-normal leading-6 text-white text-center px-5"
+                className="text-base text-[14px] md:text-[24px] font-normal leading-6 text-white text-center px-5"
               >
                 {images[currentIndex].description}
               </motion.p>

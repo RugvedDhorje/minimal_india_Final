@@ -3,6 +3,7 @@ import Creative from "@/components/Creative";
 import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Services from "@/components/Services";
+import { Tech } from "@/components/Tech";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -46,6 +47,7 @@ export default function Home() {
         <div className="w-full mx-auto">
           <HomePage />
           <Services />
+          <Tech />
           <Creative />
           <Footer />
         </div>

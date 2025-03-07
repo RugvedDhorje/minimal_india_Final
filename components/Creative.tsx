@@ -1,30 +1,30 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+// import { useScroll, useTransform } from "framer-motion";
 // import { NavigationMenuDemo } from "./NavigationButton";
 // import Image from "next/image";
 import FilmSection from "./FilmSection";
 // import CodeProject from "./CodeProjects";
-import { MacbookScroll } from "./ui/macbook-scroll";
+// import { MacbookScroll } from "./ui/macbook-scroll";
 // import { NavigationMenuDemo } from "./NavigationButton";
 import { useEffect, useRef } from "react";
-import CircleCarousel from "./CircleCarousel";
+// import CircleCarousel from "./CircleCarousel";
 import About from "./About";
 // import { CompanyLogo } from "./CompanyLogos";
 
 export default function Creative() {
-  const circleRef = useRef(null);
-  const innerCircleRef = useRef(null);
+  // const circleRef = useRef(null);
+  // const innerCircleRef = useRef(null);
   const techSectionRef = useRef<HTMLDivElement | null>(null);
   const nextDivRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.45, 0.47], [1, 150]);
-  const innerCircleScale = useTransform(
-    scrollYProgress,
-    [0.45, 0.47],
-    [1, 100]
-  );
+  // const circleScale = useTransform(scrollYProgress, [0.45, 0.47], [1, 150]);
+  // const innerCircleScale = useTransform(
+  // scrollYProgress,
+  // [0.45, 0.47],
+  // [1, 100]
+  // );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +50,7 @@ export default function Creative() {
           {/* Tech section */}
           <div className="w-12/12 mx-auto">
             {/* <TechSection /> */}
-            <div
+            {/* <div
               id="tech"
               className="overflow-hidden dark:bg-[#0B0B0F] w-full relative overflow-y-auto snap-y snap-mandatory"
             >
@@ -91,7 +91,7 @@ export default function Creative() {
                 />
                 <CircleCarousel />
               </div>
-            </div>
+            </div> */}
             {/* <HorizontalScrollCarousel /> */}
           </div>
         </div>
