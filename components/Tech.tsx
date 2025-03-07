@@ -18,10 +18,7 @@ export function Tech() {
 
   return (
     <div className="w-full mx-auto">
-      <div
-        id="tech"
-        className="overflow-hidden dark:bg-[#0B0B0F] w-full mx-auto relative "
-      >
+      <div className="overflow-hidden dark:bg-[#0B0B0F] w-full mx-auto relative ">
         <div className="absolute inset-0 flex justify-center -z-10 pt-[500px]">
           <motion.div
             ref={circleRef}

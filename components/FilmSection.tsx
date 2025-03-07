@@ -1,13 +1,12 @@
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import Slider from "./SwipeToSlide";
 
 export default function FilmSection() {
   return (
-    <ParallaxProvider>
+    <div id="film" className="w-full mx-auto bg-black ">
       {/* Background Video Section */}
-      <div className="w-full relative h-[700px] flex justify-center items-center">
+      <div className="w-full relative h-[700px] flex justify-center items-center mx-auto">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full max-w-screen-2xl h-full rounded-3xl bg-gray-700 overflow-hidden">
+        <div className="absolute inset-0 w-full max-w-screen-2xl mx-auto h-full rounded-3xl bg-gray-700 overflow-hidden">
           <video
             src="https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4"
             autoPlay
@@ -32,13 +31,12 @@ export default function FilmSection() {
       </div>
 
       {/* Parallax Scrolling Section */}
-      <Parallax translateY={[10, -100]}>
-        <div className="h-auto bg-gray-200 w-full rounded-3xl">
-          <div className="w-full">
-            <Slider />
-          </div>
+
+      <div className="h-auto w-full rounded-3xl">
+        <div className="w-full">
+          <Slider />
         </div>
-      </Parallax>
-    </ParallaxProvider>
+      </div>
+    </div>
   );
 }

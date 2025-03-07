@@ -1,5 +1,7 @@
 "use client";
-import Creative from "@/components/Creative";
+import About from "@/components/About";
+// import Creative from "@/components/Creative";
+import FilmSection from "@/components/FilmSection";
 import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Services from "@/components/Services";
@@ -9,7 +11,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 3700);
     return () => clearTimeout(timer);
   }, []);
   return (
@@ -32,23 +34,21 @@ export default function Home() {
 
           {/* Desktop Video */}
           <source
-            src="/WhatsApp Video 2025-02-15 at 1.01.23 PM.mp4"
+            src="/Minimal India (Open 16-9).mp4"
             type="video/mp4"
             media="(min-width: 1025px)"
           />
 
           {/* Fallback Video */}
-          <source
-            src="/WhatsApp Video 2025-02-15 at 1.01.23 PM.mp4"
-            type="video/mp4"
-          />
+          <source src="/Minimal India (Open 16-9).mp4" type="video/mp4" />
         </video>
       ) : (
         <div className="w-full mx-auto">
           <HomePage />
           <Services />
           <Tech />
-          <Creative />
+          <FilmSection />
+          <About />
           <Footer />
         </div>
       )}

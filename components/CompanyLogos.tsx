@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export function CompanyLogo() {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto h-auto bg-gradient-to-r from-[#130C0B] to-[#0C0807]">
+    <div className="w-full max-w-screen-2xl mx-auto h-auto py-20">
       <motion.h4
         initial={{ y: -100, opacity: 0 }} // Start position & invisible
         whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
@@ -10,7 +10,7 @@ export function CompanyLogo() {
       >
         Trusted by Industry Leaders
       </motion.h4>
-      <div className="w-11/12 mx-auto flex items-center justify-evenly gap-x-3 py-6 bg-black rounded-full overflow-hidden">
+      <div className="w-11/12 mx-auto flex items-center justify-evenly gap-x-3 py-6 bg-gradient-to-r from-[#130C0B] to-[#0C0807] rounded-full overflow-hidden">
         <motion.img
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in

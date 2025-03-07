@@ -226,7 +226,7 @@ export const Card = ({
             whileInView={{ x: 0 }}
             transition={{ duration: 0.9 }}
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-black text-sm md:text-base font-medium font-sans text-left hidden group-hover:block"
+            className="text-white text-sm md:text-base font-medium font-sans text-left hidden group-hover:block"
           >
             {card.category}
           </motion.p>
@@ -235,7 +235,7 @@ export const Card = ({
             whileInView={{ x: 0 }}
             transition={{ duration: 0.9 }}
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-black text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2 hidden group-hover:block"
+            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2 hidden group-hover:block"
           >
             {card.title}
           </motion.p>
@@ -244,7 +244,8 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="object-cover absolute z-10 inset-0 group-hover:opacity-40"
+          className="object-cover absolute z-10 inset-0 transition-all duration-300 ease-in-out
+        group-hover:blur-md"
         />
       </motion.button>
     </>

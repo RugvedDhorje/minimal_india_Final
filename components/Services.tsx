@@ -150,7 +150,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="w-full mx-auto ">
+        <div id="design" className="w-full mx-auto">
           <div className="max-w-screen-2xl w-11/12 mx-auto mt-[80px]">
             <motion.div
               //   initial={{ y: 200 }}

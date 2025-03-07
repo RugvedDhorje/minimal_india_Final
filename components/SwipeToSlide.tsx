@@ -568,7 +568,7 @@ function MultipleItems() {
   };
 
   return (
-    <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto overflow-hidden px-4 bg-gradient-to-r from-[#130C0B] to-[#0C0807] py-10">
+    <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto overflow-hidden px-7 py-10">
       <Slider {...settings}>
         {info.map((item) => (
           <div

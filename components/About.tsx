@@ -3,13 +3,13 @@ import EmailSubscriptionForm from "./EmailSubscriptionForm";
 
 export default function About() {
   return (
-    <>
-      <div className=" w-full bg-gradient-to-r from-[#130C0B] to-[#0C0807]">
+    <div className="w-full mx-auto bg-black">
+      <div className=" w-full">
         <CompanyLogo />
       </div>
-      <div className="w-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] py-10 ">
-        <div className="bg-black w-11/12 lg:w-10/12 mx-auto rounded-3xl sm:flex  justify-evenly my-5 shadow-lg">
-          <div className="h-[500px] sm:w-4/12 md:w-3/12 w-full rounded-3xl bg-gradient-to-b from-black via-black to-[#202020]/90 flex flex-col justify-center ">
+      <div className="w-full max-w-screen-2xl mx-auto py-10 ">
+        <div className="bg-gradient-to-b from-[#202020] via-black to-black w-11/12  mx-auto rounded-3xl sm:flex  justify-evenly my-5 shadow-lg">
+          <div className="h-[500px] sm:w-4/12 md:w-3/12 w-full mt-4 rounded-3xl bg-gradient-to-b from-black via-black to-[#202020]/90 flex flex-col justify-center ">
             <img
               src="/QR_code.png"
               alt=""
@@ -31,6 +31,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

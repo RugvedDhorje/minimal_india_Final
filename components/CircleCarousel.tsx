@@ -106,7 +106,7 @@ const CircularImageCarousel = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div id="tech" className="w-full overflow-hidden">
       <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 bg-black flex flex-col justify-center items-center">
         {/* <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
