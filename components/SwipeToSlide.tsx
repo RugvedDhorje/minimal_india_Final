@@ -567,7 +567,7 @@ function MultipleItems() {
   };
 
   return (
-    <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto overflow-hidden px-7 py-10">
+    <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto py-10 ">
       <Slider {...settings}>
         {info.map((item) => (
           <div
@@ -584,25 +584,27 @@ function MultipleItems() {
               Yezdi
             </motion.h4>
             {/* Centered Name */}
-            <h4 className="text-white absolute text-[32px] hidden group-hover:flex items-center justify-center w-full h-full">
-              Name
-            </h4>
+
             <div
               className="relative h-72 rounded-lg overflow-hidden cursor-pointer bg-black hover:opacity-20"
               style={{
                 backgroundImage: `url(${item.Profile})`,
                 backgroundSize: "cover",
+                borderRadius: "10px",
               }}
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <video
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:blur-[4px] ${
                   hoveredCard === item.id ? "block" : "hidden"
                 }`}
                 autoPlay
                 muted
                 loop
+                style={{
+                  borderRadius: "10px",
+                }}
               >
                 <source src={item.video} type="video/mp4" />
               </video>

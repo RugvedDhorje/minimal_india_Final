@@ -13,9 +13,22 @@ export default function Services() {
   const { scrollYProgress } = useScroll();
 
   // Map scroll progress to scale values for the circle
-  const circleScale = useTransform(scrollYProgress, [0.19, 0.27], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.19, 0.27], [1, 5]);
-
+  const circleScale = useTransform(scrollYProgress, [0.19, 0.35], [1, 150]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.2, 0.35], [1, 4.5]);
+  //  New opacity transform for the section that should fade in
+  const sectionOpacity = useTransform(
+    scrollYProgress,
+    [0.23, 0.25], // Adjust these values to control when the fade happens
+    [0, 1] // Start at opacity 0, end at opacity 1
+  );
+  // Blur transform that decreases as opacity increases
+  const sectionBlur = useTransform(
+    scrollYProgress,
+    [0.2, 0.25], // Same values as opacity for synchronized effect
+    [10, 0] // Start with blur 10px, end with no blur
+  );
+  // Create a string transform for the blur filter
+  const blurFilter = useTransform(sectionBlur, (value) => `blur(${value}px)`);
   return (
     <div className="relative w-full h-auto">
       {/* Sticky Section */}
@@ -150,47 +163,56 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div id="design" className="w-full mx-auto">
-          <div className="max-w-screen-2xl w-11/12 mx-auto mt-[80px]">
-            <motion.div
-              //   initial={{ y: 200 }}
-              //   whileInView={{ y: 0 }}
-              //   transition={{ duration: 0.8 }}
-              className="w-full "
-            >
-              {/* <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash ">
+        {/* <div id="design" className="w-full mx-auto"> */}
+        <motion.div
+          id="design"
+          style={{
+            opacity: sectionOpacity,
+            filter: blurFilter, // Use the transformed string value
+            // filter: `blur(${sectionBlur}px)`,
+            // filter: `blur(10px)`,
+          }}
+          className="max-w-screen-2xl w-11/12 mx-auto -mt-[200px] relative z-30 "
+        >
+          <motion.div
+            //   initial={{ y: 200 }}
+            //   whileInView={{ y: 0 }}
+            //   transition={{ duration: 0.8 }}
+            className="w-full "
+          >
+            {/* <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash ">
                         Designs that speak louder than words
                       </h1> */}
-              <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative z-30">
-                Designs that{" "}
-                <span
-                  className="bg-gradient-to-r from-[#0e0844]  to-[#380935] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative 
+            <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative z-30">
+              Designs that{" "}
+              <span
+                className="bg-gradient-to-r from-[#0e0844]  to-[#380935] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative 
                          text-transparent bg-clip-text 
                           cursor-pointer"
-                >
-                  speak louder
-                </span>{" "}
-                than words
-              </h1>
-              <h2 className="text-[#292929] lg:text-[30px] text-[20px] mx-auto leading-none text-center font-clash mt-5 relative z-30">
-                From bold ideas to beautiful executions, we craft visuals that
-                inspire
-              </h2>
-            </motion.div>
-            <div className="mt-5 w-full flex justify-end">
-              {/* <NavigationMenuDemo /> */}
-            </div>
-            <motion.div
-              initial={{ y: 100 }}
-              whileInView={{ y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="w-full z-30 relative"
-            >
-              {/* <Carousel items={cards} /> */}
-              <Carousel items={cards} />
-            </motion.div>
+              >
+                speak louder
+              </span>{" "}
+              than words
+            </h1>
+            <h2 className="text-[#292929] lg:text-[30px] text-[20px] mx-auto leading-none text-center font-clash mt-5 relative z-30">
+              From bold ideas to beautiful executions, we craft visuals that
+              inspire
+            </h2>
+          </motion.div>
+          <div className="mt-5 w-full flex justify-end">
+            {/* <NavigationMenuDemo /> */}
           </div>
-        </div>
+          <motion.div
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full z-30 relative"
+          >
+            {/* <Carousel items={cards} /> */}
+            <Carousel items={cards} />
+          </motion.div>
+        </motion.div>
+        {/* </div> */}
       </motion.div>
     </div>
   );

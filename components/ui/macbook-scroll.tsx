@@ -1463,12 +1463,14 @@ export const Lid = ({
           transform: "perspective(800px) rotateX(-25deg) translateZ(0px)",
           transformOrigin: "bottom",
           transformStyle: "preserve-3d",
+          borderRadius: "10px",
         }}
         className="h-[12rem] w-[32rem] bg-[#010101] rounded-2xl p-2 relative"
       >
         <div
           style={{
             boxShadow: "0px 2px 0px 2px var(--neutral-900) inset",
+            borderRadius: "10px",
           }}
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
@@ -1488,7 +1490,12 @@ export const Lid = ({
         }}
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
-        <div className="absolute inset-0 bg-[#272729] rounded-lg" />
+        <div
+          className="absolute inset-0 bg-[#272729] rounded-lg"
+          style={{
+            borderRadius: "14px",
+          }}
+        />
         {/* <Image
           src={src as string}
           alt="aceternity logo"
@@ -1502,6 +1509,9 @@ export const Lid = ({
           muted
           playsInline
           className="bg-black object-fill object-center absolute rounded-lg inset-0 h-full w-full"
+          style={{
+            borderRadius: "14px",
+          }}
         />
       </motion.div>
     </div>

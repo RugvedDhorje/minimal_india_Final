@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function HomePage() {
   return (
-    <div className="w-full mx-auto bg-gray-200">
+    <div id="home" className="w-full mx-auto bg-gray-200">
       {/* Main Content */}
       <Navbar />
       {/* <Navbar /> */}
@@ -31,6 +31,9 @@ export default function HomePage() {
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5 }}
             className="sm:text-[16px] text-[14px] font-normal px-4 py-2 bg-[#292929] rounded-md text-white"
+            style={{
+              borderRadius: "7px",
+            }}
           >
             Let’s Create Together
           </motion.button>
