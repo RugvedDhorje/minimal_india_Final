@@ -177,43 +177,45 @@ export const Card = ({
 
   return (
     <>
-      <AnimatePresence>
-        {open && (
-          <div className="fixed inset-0 h-screen z-50">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="bg-black/70 backdrop-blur-md h-full w-full fixed inset-0"
-            />
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              ref={containerRef}
-              layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
-            >
-              <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto mb-3 bg-black rounded-full flex items-center justify-center"
-                onClick={handleClose}
-              >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
-              </button>
-
-              {/* ✅ Ensure only string URLs are passed to ImageGrid */}
-              <ImageGrid
-                card={{
-                  ...card,
-                  content: Array.isArray(card.content)
-                    ? card.content.filter((item) => typeof item === "string")
-                    : [],
-                }}
+      <div>
+        <AnimatePresence>
+          {open && (
+            <div className="fixed inset-0 flex items-center justify-center z-50 py-5">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="bg-black/70 backdrop-blur-md fixed inset-0 "
               />
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                ref={containerRef}
+                layoutId={layout ? `card-${card.title}` : undefined}
+                className="max-w-5xl mx-auto bg-white shadow-xl h-fit relative my-10 p-4 md:p-5 rounded-3xl font-sans z-10 "
+              >
+                <button
+                  className="sticky top-4 h-8 w-8 right-0 ml-auto mb-3 bg-black rounded-full flex items-center justify-center"
+                  onClick={handleClose}
+                >
+                  <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                </button>
+
+                {/* ✅ Ensure only string URLs are passed to ImageGrid */}
+                <ImageGrid
+                  card={{
+                    ...card,
+                    content: Array.isArray(card.content)
+                      ? card.content.filter((item) => typeof item === "string")
+                      : [],
+                  }}
+                />
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
+      </div>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}

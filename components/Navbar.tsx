@@ -134,6 +134,7 @@ import { motion } from "framer-motion";
 export default function Navbar() {
   const scrollThreshold = 50;
   const [navOpen, setNavOpen] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > scrollThreshold) {
@@ -193,6 +194,7 @@ export default function Navbar() {
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5 }}
+            onClick={() => setShowForm(true)}
             className="hidden lg:block text-[16px] font-normal uppercase px-4 py-2 border border-gray-700 rounded-xl text-gray-700 hover:bg-gray-700 hover:text-white transition"
           >
             Get In Touch
@@ -208,6 +210,45 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+      {/* Popup Form */}
+      {showForm && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={() => setShowForm(false)}
+        >
+          <div
+            className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button (Top Right) */}
+            <button
+              className="absolute top-2 right-2 text-gray-700 hover:text-black"
+              onClick={() => setShowForm(false)}
+            >
+              <X size={24} />
+            </button>
+
+            <h2 className="text-xl font-semibold mb-4">Get In Touch</h2>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full p-2 border border-gray-300 rounded mb-2"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full p-2 border border-gray-300 rounded mb-2"
+            />
+            <textarea
+              placeholder="Your Message"
+              className="w-full p-2 border border-gray-300 rounded mb-2"
+            ></textarea>
+            <button className="w-full bg-gray-700 text-white p-2 rounded mb-2">
+              Submit
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Mobile Navigation Menu */}
       {navOpen && (
