@@ -6,9 +6,12 @@ export default function HomePage() {
   return (
     <div
       id="home"
-      className="w-full h-full mx-auto bg-gray-200 object-cover object-center "
+      className="w-full h-full mx-auto bg-gray-200  rounded-b-[50px] shadow-2xl "
       style={{
         backgroundImage: `url('/Home banner.jpg')`,
+        backgroundSize: "cover", // Ensures the full image fits inside without cropping
+        backgroundPosition: "center", // Centers the image
+        backgroundRepeat: "no-repeat", // Prevents tiling
       }}
     >
       {/* Main Content */}
