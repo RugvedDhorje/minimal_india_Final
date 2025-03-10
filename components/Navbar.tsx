@@ -213,7 +213,7 @@ export default function Navbar() {
       {/* Popup Form */}
       {showForm && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50"
           onClick={() => setShowForm(false)}
         >
           <div

@@ -86,6 +86,11 @@ export default {
             backgroundPosition: "-200% 0",
           },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         "slide-up": "slideUp 1.5s ease-in-out forwards",
@@ -98,6 +103,8 @@ export default {
         shimmer: "shimmer 2s linear infinite",
         galaxyMove: "galaxyMove 5s infinite ease-in-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       borderRadius: {
         lg: "var(--radius)",

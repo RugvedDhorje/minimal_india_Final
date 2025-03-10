@@ -1,11 +1,21 @@
-import { CompanyLogo } from "./CompanyLogos";
+// import { CompanyLogo } from "./CompanyLogos";
 import EmailSubscriptionForm from "./EmailSubscriptionForm";
+import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export default function About() {
   return (
     <div className="w-full mx-auto bg-black">
-      <div className=" w-full">
-        <CompanyLogo />
+      <div className="w-full max-w-screen-2xl mx-auto">
+        <h4 className="text-white text-[30px] font-light text-center pt-10 pb-6">
+          Trusted By Industry Leaders
+        </h4>
+      </div>
+      <div className="rounded-md flex flex-col antialiased bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="fast"
+        />
       </div>
       <div className="w-full max-w-screen-2xl mx-auto py-10 ">
         <div className="bg-gradient-to-b from-[#202020] via-black to-black w-11/12  mx-auto rounded-3xl sm:flex  justify-evenly my-5 shadow-lg">
@@ -34,3 +44,20 @@ export default function About() {
     </div>
   );
 }
+const testimonials = [
+  {
+    image: "/companyLogo.png",
+  },
+  {
+    image: "/companyLogo.png",
+  },
+  {
+    image: "/companyLogo.png",
+  },
+  {
+    image: "/companyLogo.png",
+  },
+  {
+    image: "/companyLogo.png",
+  },
+];

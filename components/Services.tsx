@@ -178,7 +178,7 @@ export default function Services() {
             //   initial={{ y: 200 }}
             //   whileInView={{ y: 0 }}
             //   transition={{ duration: 0.8 }}
-            className="w-full "
+            className="w-full"
           >
             {/* <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash ">
                         Designs that speak louder than words

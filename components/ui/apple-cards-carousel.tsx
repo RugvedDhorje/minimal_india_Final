@@ -193,7 +193,7 @@ export const Card = ({
                 exit={{ opacity: 0 }}
                 ref={containerRef}
                 layoutId={layout ? `card-${card.title}` : undefined}
-                className="max-w-5xl mx-auto bg-white shadow-xl h-fit relative my-10 p-4 md:p-5 rounded-3xl font-sans z-10 "
+                className="max-w-5xl mx-auto bg-white shadow-xl h-fit relative my-10 p-4 md:p-5 rounded-3xl font-sans z-10"
               >
                 <button
                   className="sticky top-4 h-8 w-8 right-0 ml-auto mb-3 bg-black rounded-full flex items-center justify-center"
