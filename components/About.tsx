@@ -35,7 +35,8 @@ export default function About() {
           <div className="h-[500px] sm:w-7/12 md:w-8/12 w-full mt-4 my-6 rounded-3xl bg-gradient-to-b from-black via-black to-[#202020] flex justify-center items-center">
             <h2 className="lg:text-[70px] md:text-[50px] text-[40px] tracking-wide font-semibold text-center mt-20 text-white">
               <span className="animate-colorChange">&quot;</span>
-              The mind behind MinimalIndia.
+              We Don&apos;t Just Create,
+              <br /> We Dominate
               <span className="animate-colorChange">&quot;</span>
             </h2>
           </div>

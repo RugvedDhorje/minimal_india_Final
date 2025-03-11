@@ -10,11 +10,11 @@ export function Tech() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start center", "end center"],
+    offset: ["start end", "end center"],
   });
 
   // Opacity transition from 0 → 1 based on scroll progress
-  const backgroundOpacity = useTransform(scrollYProgress, [0.45, 0.6], [0, 1]);
+  const backgroundOpacity = useTransform(scrollYProgress, [0.35, 0.7], [0, 1]);
   // Map scroll progress to scale values for the circle
   // const circleScale = useTransform(scrollYProgress, [0.44, 0.46], [1, 150]);
   // const innerCircleScale = useTransform(
@@ -24,7 +24,7 @@ export function Tech() {
   // );
   const backgroundColor = useTransform(
     backgroundOpacity,
-    [0.45, 0.6],
+    [0.35, 0.7],
     ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"]
   );
 

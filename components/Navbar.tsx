@@ -130,6 +130,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import EncryptButton from "./EncryptButton";
 
 export default function Navbar() {
   const scrollThreshold = 50;
@@ -185,7 +186,7 @@ export default function Navbar() {
                   to={item}
                   smooth={true}
                   duration={500}
-                  className="text-[16px] font-normal uppercase text-gray-700 cursor-pointer"
+                  className="text-[18px] font-normal uppercase text-gray-700 cursor-pointer font-mono tracking-wider"
                 >
                   {/* Wrapping both texts inside one div */}
                   <motion.div
@@ -206,7 +207,7 @@ export default function Navbar() {
           </ul>
 
           {/* Get In Touch Button */}
-          <motion.button
+          {/* <motion.button
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5 }}
@@ -214,7 +215,10 @@ export default function Navbar() {
             className="hidden lg:block text-[16px] font-normal uppercase px-4 py-2 border border-gray-700 rounded-xl text-gray-700 hover:bg-gray-700 hover:text-white transition"
           >
             Get In Touch
-          </motion.button>
+          </motion.button> */}
+          <div onClick={() => setShowForm(true)}>
+            <EncryptButton />
+          </div>
 
           {/* Mobile Menu Toggle */}
           <button onClick={() => setNavOpen(!navOpen)} className="lg:hidden">
