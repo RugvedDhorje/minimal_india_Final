@@ -101,7 +101,7 @@ const CircularImageCarousel = () => {
     },
     {
       text: "Clarity.",
-      className: "text-blue-500/60",
+      className: "text-[#86b9ff]",
     },
   ];
 

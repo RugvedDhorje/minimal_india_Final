@@ -32,9 +32,9 @@ export default function HomePage() {
           initial={{ y: 100 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-white lg:text-[40px] md:text-[30px] text-[20px] mx-auto leading-none text-center mt-5 font-clash capitalize"
+          className="text-white lg:text-[40px] md:text-[30px] text-[20px] mx-auto leading-none text-center mt-5 font-clash "
         >
-          Showcasing creativity, innovation and stories that matter.
+          Showcasing Creativity, Innovation and Stories that Matter.
         </motion.h2>
         <div className="flex justify-center mt-14">
           {/* <motion.button

@@ -30,9 +30,14 @@ export default function FilmSection() {
             Stories you’ll want to replay.
           </h1>
           <h2 className="text-white lg:text-[40px] md:text-[30px] text-[26px] mt-5 leading-none">
-            Crafting moments, and leaving an impact.
+            Crafting moments and leaving an impact.
           </h2>
-          <button className="mt-5 text-[16px] font-normal px-4 py-2 text-[#292929] rounded-md bg-white">
+          <button
+            className="mt-5 text-[16px] font-normal px-4 py-2 text-[#292929] rounded-md bg-white"
+            style={{
+              borderRadius: "7px",
+            }}
+          >
             Watch the Reel
           </button>
         </div>
