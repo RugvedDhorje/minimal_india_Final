@@ -39,7 +39,7 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-[90px] md:text-[70px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[50px]  pb-[70px]"
         >
-          Embrace the future of <br /> urban mobility
+          We are the ones you are looking <br /> for, not what you expected.
         </motion.h1>
 
         <div className="max-w-screen-2xl w-9/12 sm:w-full lg:w-9/12 mx-auto sm:flex sm:flex-wrap mb-10 relative ">
@@ -82,7 +82,7 @@ export default function Services() {
                 transition={{ duration: 0.5 }}
                 className="md:text-[30px] text-[24px] text-center font-semibold mb-2"
               >
-                STRESS-FREE SERVICES
+                IMAGINE
               </motion.h4>
               <motion.p
                 initial={{ x: -150 }}
@@ -90,9 +90,19 @@ export default function Services() {
                 transition={{ duration: 0.5 }}
                 className="md:text-[18px] text-[16px] font-light"
               >
-                Unlock effortless mobility—from seamless registration to
-                all-inclusive maintenance, we handle the details so you enjoy
-                the ride.
+                <span> Brand Identity </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block  ml-2"></span>
+                <span> Graphic Design </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Illustration </span>
+                <br />
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Campaign Design </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Creative Visualisation </span>
+                <br />
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Packaging </span>
               </motion.p>
             </div>
           </div>
@@ -104,17 +114,26 @@ export default function Services() {
                 transition={{ duration: 0.5 }}
                 className="md:text-[30px] text-[24px] text-center font-semibold"
               >
-                STRESS-FREE SERVICES
+                EXPERIENCE
               </motion.h4>
               <motion.p
                 initial={{ x: 150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="md:text-[18px] text-[16px] font-light"
+                className="md:text-[18px] text-[16px] font-light lg:ml-6"
               >
-                Unlock effortless mobility—from seamless registration to
-                all-inclusive maintenance, we handle the details so you enjoy
-                the ride.
+                <span> Web Design </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2 "></span>
+                <span> Landing Pages </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> UI/Ux </span>
+                <br />
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> E-commerce </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> CMS </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> SEO Optimization </span>
               </motion.p>
             </div>
           </div>
@@ -126,7 +145,7 @@ export default function Services() {
                 transition={{ duration: 0.5 }}
                 className="md:text-[30px] text-[24px] text-center font-semibold"
               >
-                STRESS-FREE SERVICES
+                INNOVATE
               </motion.h4>
               <motion.p
                 initial={{ x: -150 }}
@@ -134,9 +153,18 @@ export default function Services() {
                 transition={{ duration: 0.5 }}
                 className="md:text-[18px] text-[16px] font-light"
               >
-                Unlock effortless mobility—from seamless registration to
-                all-inclusive maintenance, we handle the details so you enjoy
-                the ride.
+                <span> App Development </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2 "></span>
+                <span> Web Development </span>
+                <br />
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> AI Solutions </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Blockchain </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Cloud Computing </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Cybersecurity </span>
               </motion.p>
             </div>
           </div>
@@ -148,17 +176,27 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="md:text-[30px] text-[24px] text-center font-semibold"
               >
-                STRESS-FREE SERVICES
+                CAPTIVATE
               </motion.h4>
               <motion.p
                 initial={{ x: 150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="md:text-[18px] text-[16px] font-light"
+                className="md:text-[18px] text-[16px] font-light lg:ml-10"
               >
-                Unlock effortless mobility—from seamless registration to
-                all-inclusive maintenance, we handle the details so you enjoy
-                the ride.
+                <span> Corporate Videos </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2 "></span>
+                <span> Commercials </span>
+                <br />
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Documentaries </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Animation </span>
+                <br />
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Motion Graphics </span>
+                <span className="w-2.5 h-2.5 rounded-full bg-current inline-block ml-2"></span>
+                <span> Virtual Production </span>
               </motion.p>
             </div>
           </div>
