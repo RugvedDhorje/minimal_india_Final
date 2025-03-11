@@ -23,7 +23,7 @@ export default function HomePage() {
           initial={{ y: -100 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.3 }}
-          className="text-white lg:text-[80px] md:text-[60px] text-[40px] mx-auto leading-none font-bold mt-14 text-center font-clash "
+          className="text-white lg:text-[80px] md:text-[60px] text-[40px] mx-auto leading-none font-bold mt-14 text-center font-clash capitalize"
           // bg-gradient-to-l from-[#292929] to-transparent
         >
           Minimal ideas, maximum impact.
@@ -32,9 +32,9 @@ export default function HomePage() {
           initial={{ y: 100 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-white lg:text-[40px] md:text-[30px] text-[20px] mx-auto leading-none text-center mt-5 font-clash"
+          className="text-white lg:text-[40px] md:text-[30px] text-[20px] mx-auto leading-none text-center mt-5 font-clash capitalize"
         >
-          Showcasing creativity, innovation, and stories that matter.
+          Showcasing creativity, innovation and stories that matter.
         </motion.h2>
         <div className="flex justify-center mt-14">
           {/* <motion.button

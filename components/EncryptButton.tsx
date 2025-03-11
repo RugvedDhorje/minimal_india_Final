@@ -59,7 +59,6 @@ const EncryptButton = () => {
       }}
       className="group relative overflow-hidden rounded-lg border-[1px] border-[#292929] bg-[#292929] px-4 py-2 font-mono font-medium uppercase text-neutral-300 transition-colors hover:text-white"
     >
-      {/* className="hidden lg:block text-[16px] font-normal uppercase px-4 py-2 border border-gray-700 rounded-xl text-gray-700 hover:bg-gray-700 hover:text-white transition" */}
       <div className="relative z-10 flex items-center gap-2 px-2">
         <span>{text}</span>
       </div>

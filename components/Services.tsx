@@ -14,7 +14,7 @@ export default function Services() {
 
   // Map scroll progress to scale values for the circle
   const circleScale = useTransform(scrollYProgress, [0.19, 0.37], [1, 150]);
-  const innerCircleScale = useTransform(scrollYProgress, [0.2, 0.37], [1, 300]);
+  const innerCircleScale = useTransform(scrollYProgress, [0.2, 0.37], [1, 4.5]);
   // [1,4.5]
   //  New opacity transform for the section that should fade in
   const sectionOpacity = useTransform(
@@ -38,7 +38,7 @@ export default function Services() {
           initial={{ y: -200 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center lg:text-[85px] md:text-[70px] text-[50px] font-bold text-gray-900 leading-none sm:pt-[50px]  pb-[70px]"
+          className="text-center lg:text-[85px] md:text-[70px] text-[40px] mt-10 sm:mt-0 px-2 sm:px-0 font-bold text-gray-900 leading-none sm:pt-[50px]  pb-[70px]"
         >
           We are the ones you are looking for,
           <br /> not what you expected.
@@ -65,8 +65,8 @@ export default function Services() {
                 ref={innerCircleRef}
                 className="-z-10"
                 style={{
-                  width: "1px",
-                  height: "1px",
+                  width: "30px",
+                  height: "30px",
                   borderRadius: "50%",
                   backgroundColor: "white",
                   scale: innerCircleScale,
@@ -251,7 +251,7 @@ export default function Services() {
             // filter: `blur(${sectionBlur}px)`,
             // filter: `blur(10px)`,
           }}
-          className="max-w-screen-2xl w-11/12 mx-auto -mt-[200px] relative z-30 "
+          className="max-w-screen-2xl w-11/12 mx-auto sm:-mt-[200px] relative z-30 "
         >
           <motion.div
             initial={{ y: 200 }}

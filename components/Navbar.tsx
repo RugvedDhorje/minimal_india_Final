@@ -216,7 +216,7 @@ export default function Navbar() {
           >
             Get In Touch
           </motion.button> */}
-          <div onClick={() => setShowForm(true)}>
+          <div className="hidden lg:block" onClick={() => setShowForm(true)}>
             <EncryptButton />
           </div>
 
