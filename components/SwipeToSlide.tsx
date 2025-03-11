@@ -579,14 +579,14 @@ function MultipleItems() {
               initial={{ x: 100 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white absolute text-[32px] hidden group-hover:block pl-[150px] top-[100px]"
+              className="text-white absolute z-50 text-[32px] hidden group-hover:block pl-[150px] top-[100px]"
             >
               Yezdi
             </motion.h4>
             {/* Centered Name */}
 
             <div
-              className="relative h-72 rounded-lg overflow-hidden cursor-pointer bg-black hover:opacity-20"
+              className="relative h-72 rounded-lg overflow-hidden cursor-pointer bg-black hover:opacity-90"
               style={{
                 backgroundImage: `url(${item.Profile})`,
                 backgroundSize: "cover",
@@ -596,7 +596,7 @@ function MultipleItems() {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <video
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:blur-[4px] ${
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:blur-[3px] ${
                   hoveredCard === item.id ? "block" : "hidden"
                 }`}
                 autoPlay
