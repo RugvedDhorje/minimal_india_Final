@@ -177,15 +177,31 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <ul className="hidden lg:flex space-x-6">
             {["home", "tech", "design", "film"].map((item) => (
-              <Link
+              <motion.div
                 key={item}
-                to={item}
-                smooth={true}
-                duration={500}
-                className="text-[16px] font-normal uppercase text-gray-700 hover:text-black transition cursor-pointer"
+                className="relative h-[20px] overflow-hidden flex items-start"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </Link>
+                <Link
+                  to={item}
+                  smooth={true}
+                  duration={500}
+                  className="text-[16px] font-normal uppercase text-gray-700 cursor-pointer"
+                >
+                  {/* Wrapping both texts inside one div */}
+                  <motion.div
+                    initial={{ y: "0%" }}
+                    whileHover={{ y: "-50%" }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="flex flex-col"
+                  >
+                    {/* Original Text */}
+                    <span>{item.charAt(0).toUpperCase() + item.slice(1)}</span>
+
+                    {/* Duplicate Text (Comes from Below) */}
+                    <span>{item.charAt(0).toUpperCase() + item.slice(1)}</span>
+                  </motion.div>
+                </Link>
+              </motion.div>
             ))}
           </ul>
 

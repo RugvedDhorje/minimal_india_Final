@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
+import SpotlightButton from "./SpotlightButton";
 
 export default function HomePage() {
   return (
@@ -36,7 +37,7 @@ export default function HomePage() {
           Showcasing creativity, innovation, and stories that matter.
         </motion.h2>
         <div className="flex justify-center mt-14">
-          <motion.button
+          {/* <motion.button
             initial={{ y: 100 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5 }}
@@ -46,7 +47,8 @@ export default function HomePage() {
             }}
           >
             Let’s Create Together
-          </motion.button>
+          </motion.button> */}
+          <SpotlightButton />
         </div>
       </div>
     </div>
