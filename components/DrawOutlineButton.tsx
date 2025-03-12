@@ -50,7 +50,7 @@ const DrawOutlineButton: React.FC<DrawOutlineButtonProps> = ({
       href={link} // Navigate to the link
       target="_blank" // Open in a new tab
       rel="noopener noreferrer" // Security best practice
-      className="group text-[18px] relative px-4 py-1 font-medium text-slate-100 transition-colors duration-[400ms] hover:text-[#86b9ff]"
+      className="group text-[18px] relative px-4 py-1 font-medium text-slate-100 transition-colors duration-[400ms] hover:text-white"
     >
       <span>{children}</span>
 

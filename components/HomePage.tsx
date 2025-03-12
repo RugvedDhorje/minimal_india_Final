@@ -32,7 +32,7 @@ export default function HomePage() {
           initial={{ y: 100 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-white lg:text-[40px] md:text-[30px] text-[20px] mx-auto leading-none text-center mt-5 font-clash "
+          className="text-white lg:text-[40px] md:text-[30px] text-[20px] mx-auto text-center mt-5 font-clash leading-6"
         >
           Showcasing Creativity, Innovation and Stories that Matter.
         </motion.h2>

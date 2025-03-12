@@ -133,7 +133,15 @@ function MultipleItems() {
   };
   return (
     <>
-      <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto py-10">
+      <div
+        className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto py-10"
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent, white 15%, white 90%, transparent)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, white 15%, white 90%, transparent)",
+        }}
+      >
         <Slider {...settings}>
           {data.map((item) => (
             <div
@@ -153,7 +161,7 @@ function MultipleItems() {
                     <img
                       src={item.src}
                       alt="Thumbnail"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:blur-sm"
                       style={{
                         borderRadius: "10px",
                       }}

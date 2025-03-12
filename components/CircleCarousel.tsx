@@ -251,7 +251,7 @@ const CircularImageCarousel = () => {
               initial={{ x: -50 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white sm:text-[36px] text-[24px] font-semibold mb-2 text-center sm:mt-5 mt-10"
+              className="text-white sm:text-[36px] text-[24px] font-semibold lg:mb-2 text-center sm:mt-5 mt-10"
             >
               {images[currentIndex].name}
             </motion.h2>
@@ -261,14 +261,14 @@ const CircularImageCarousel = () => {
                 initial={{ x: -50 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-base text-[14px] md:text-[24px] font-normal leading-6 text-white text-center px-5"
+                className="text-base text-[16px] md:text-[24px] font-normal md:leading-7 leading-tight text-white text-center px-5"
               >
                 {images[currentIndex].description}
               </motion.p>
             </div>
           </div>
         </div>
-        <div className="absolute mt-14">
+        <div className="absolute mt-36 md:mt-14">
           <DrawOutlineButton link={images[currentIndex].link}>
             Link
           </DrawOutlineButton>

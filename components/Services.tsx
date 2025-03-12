@@ -78,7 +78,7 @@ export default function Services() {
 
           {/* Content Divs */}
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
-            <div className="lg:py-[90px] md:p-[80px] w-5/6 md:w-full mr-5 sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
+            <div className="lg:py-[90px] md:p-[80px] w-full mr-5 sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
               <motion.h4
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
@@ -91,9 +91,9 @@ export default function Services() {
                 initial={{ x: -150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="md:text-[18px] text-[16px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
+                className="md:text-[18px] sm:text-[14px] text-[14px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
               >
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Brand Identity</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Graphic Design</span>
@@ -101,13 +101,13 @@ export default function Services() {
                   <span>Illustration</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Campaign Design</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Creative Visualisation</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Packaging Design</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>CGI</span>
@@ -118,7 +118,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
-            <div className="lg:py-[100px] md:p-[80px] w-5/6 md:w-full mx-auto ">
+            <div className="lg:py-[100px] md:p-[80px] w-full mx-auto ">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
@@ -131,10 +131,10 @@ export default function Services() {
                 initial={{ x: 150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="md:text-[18px] text-[16px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
+                className="md:text-[18px] text-[14px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
               >
                 {/* Grouping three divs per row */}
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Web Design</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Landing Pages</span>
@@ -142,7 +142,7 @@ export default function Services() {
                   <span>UI/UX</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>E-commerce</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>CMS</span>
@@ -150,7 +150,7 @@ export default function Services() {
                   <span>SEO Optimization</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Email Marketing</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>ReDesigning</span>
@@ -159,7 +159,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="sm:py-[100px] w-5/6 md:w-full mx-auto">
+            <div className="sm:py-[100px] w-full mx-auto">
               <motion.h4
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
@@ -172,15 +172,15 @@ export default function Services() {
                 initial={{ x: -150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="md:text-[18px] text-[16px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
+                className="md:text-[18px] text-[14px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
               >
-                <div className="flex justify-center items-center space-x-6">
+                <div className="flex justify-center items-center space-x-1 md:space-x-6">
                   <span>App Development</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Web Development</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Blockchain</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Cloud Computing</span>
@@ -188,7 +188,7 @@ export default function Services() {
                   <span>Cybersecurity</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Implementation</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Automation</span>
@@ -199,7 +199,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="lg:py-[100px] md:p-[80px] w-5/6 md:w-full  mx-5 sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
+            <div className="lg:py-[100px] md:p-[80px] w-full  md:mx-5 sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
@@ -212,27 +212,27 @@ export default function Services() {
                 initial={{ x: 150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="md:text-[18px] text-[16px] w-full font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
+                className="md:text-[18px] text-[14px] w-full font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
               >
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Corporate Videos</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Commercials</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Documentaries</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Animation</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Motion Graphics</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Virtual Production</span>
                 </div>
 
-                <div className="flex justify-center items-center space-x-3">
+                <div className="flex justify-center items-center space-x-1 md:space-x-3">
                   <span>Storytelling</span>
                   <span className="w-[4px] h-[4px] rounded-full bg-current inline-block"></span>
                   <span>Visualization</span>
