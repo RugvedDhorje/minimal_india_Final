@@ -1,13 +1,14 @@
 "use client";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Card, Carousel } from "./ui/apple-cards-carousel";
+// import { Card, Carousel } from "./ui/apple-cards-carousel";
+import DesignCards from "./DesignCards";
 // import { Design } from "./Design";
 
 export default function Services() {
-  const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
-  ));
+  // const cards = data.map((card, index) => (
+  //   <Card key={card.src} card={card} index={index} />
+  // ));
   const circleRef = useRef(null);
   const innerCircleRef = useRef(null);
   const { scrollYProgress } = useScroll();
@@ -77,7 +78,7 @@ export default function Services() {
 
           {/* Content Divs */}
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
-            <div className="lg:p-[100px] md:p-[80px] w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
+            <div className="lg:py-[90px] md:p-[80px] w-5/6 md:w-full mr-5 sm:border-r sm:border-b sm:border-gray-700 rounded-br-[70px]">
               <motion.h4
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
@@ -117,7 +118,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0 ">
-            <div className="lg:p-[100px] md:p-[80px] w-5/6 md:w-full lg:w-5/6 mx-auto ">
+            <div className="lg:py-[100px] md:p-[80px] w-5/6 md:w-full mx-auto ">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
@@ -158,7 +159,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="sm:p-[100px] w-5/6 md:w-full lg:w-5/6 mx-auto">
+            <div className="sm:py-[100px] w-5/6 md:w-full mx-auto">
               <motion.h4
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
@@ -198,7 +199,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="lg:p-[100px] md:p-[80px] m-5 w-5/6 md:w-full lg:w-5/6 mx-auto sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
+            <div className="lg:py-[100px] md:p-[80px] w-5/6 md:w-full  mx-5 sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
@@ -211,7 +212,7 @@ export default function Services() {
                 initial={{ x: 150 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="md:text-[18px] text-[16px] font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
+                className="md:text-[18px] text-[16px] w-full font-light flex flex-wrap justify-center items-center gap-x-6 gap-y-3"
               >
                 <div className="flex justify-center items-center space-x-3">
                   <span>Corporate Videos</span>
@@ -262,7 +263,7 @@ export default function Services() {
             {/* <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash ">
                         Designs that speak louder than words
                       </h1> */}
-            <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative z-30">
+            <h1 className="text-[#292929] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative z-30 pt-24">
               Designs that{" "}
               <span
                 className="bg-gradient-to-r from-[#0e0844]  to-[#380935] lg:text-[60px] md:text-[50px] text-[36px] mx-auto leading-none font-bold text-center font-clash relative 
@@ -285,10 +286,10 @@ export default function Services() {
             initial={{ y: 100 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full z-30 relative"
+            className="w-full z-30"
           >
             {/* <Carousel items={cards} /> */}
-            <Carousel items={cards} />
+            <DesignCards />
           </motion.div>
         </motion.div>
         {/* </div> */}
@@ -296,86 +297,3 @@ export default function Services() {
     </div>
   );
 }
-const data = [
-  {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "/21 DESIGN MINIMAL INDIAN .jpg",
-    content: [
-      "/set 3/20 DESIGN MINIMAL INDIAN .jpg",
-      "/set 3/16 DESIGN MINIMAL INDIAN .jpg",
-      "/set 3/17 DESIGN MINIMAL INDIAN .jpg",
-      "/set 3/18 DESIGN MINIMAL INDIAN .jpg",
-      "/set 3/19 DESIGN MINIMAL INDIAN .jpg",
-      "/set 3/22 DESIGN MINIMAL INDIAN .jpg",
-      "/set 3/23 DESIGN MINIMAL INDIAN .jpg",
-    ],
-  },
-  {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "/CARD 30 DESIGN MINIMAL INDIAN  copy.jpg",
-    content: [
-      "/set 1/14 DESIGN MINIMAL INDIAN .jpg",
-      "/set 1/15 DESIGN MINIMAL INDIAN .jpg",
-      "/set 1/30 DESIGN MINIMAL INDIAN .jpg",
-      "/set 1/31 DESIGN MINIMAL INDIAN .jpg",
-      "/set 1/32 DESIGN MINIMAL INDIAN .jpg",
-      "/img4.png",
-      "/img2.jpg",
-    ],
-  },
-  {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "/CARD 9 DESIGN MINIMAL INDIAN .jpg",
-    content: [
-      "/set 4/4 DESIGN MINIMAL INDIAN .jpg",
-      "/set 4/5 DESIGN MINIMAL INDIAN .jpg",
-      "/set 4/6 DESIGN MINIMAL INDIAN .jpg",
-      "/set 4/7 DESIGN MINIMAL INDIAN .jpg",
-      "/set 4/10 DESIGN MINIMAL INDIAN .jpg",
-      "/set 4/11 DESIGN MINIMAL INDIAN .jpg",
-    ],
-  },
-
-  {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "/set 2/26 DESIGN MINIMAL INDIAN .jpg",
-    content: [
-      "/set 2/1 DESIGN MINIMAL INDIAN .jpg",
-      "/set 2/2 DESIGN MINIMAL INDIAN .jpg",
-      "/set 2/26 DESIGN MINIMAL INDIAN .jpg",
-      "/set 2/24 DESIGN MINIMAL INDIAN .jpg",
-      "/set 2/27 DESIGN MINIMAL INDIAN .jpg",
-      "/set 2/25 DESIGN MINIMAL INDIAN .jpg",
-    ],
-  },
-  {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: [
-      "/img1 (1).jpg",
-      "/img2.jpg",
-      "/img3.jpg",
-      "/img1 (1).jpg",
-      "/img4.png",
-      "/img2.jpg",
-    ],
-  },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: [
-      "/img1 (1).jpg",
-      "/img2.jpg",
-      "/img3.jpg",
-      "/img1 (1).jpg",
-      "/img4.png",
-      "/img2.jpg",
-    ],
-  },
-];

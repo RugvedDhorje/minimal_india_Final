@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import GalaxyParticles from "./GalaxyParticles";
 import { Spotlight } from "./ui/Spotlight";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import DrawOutlineButton from "./DrawOutlineButton";
 
 const images = [
   {
     id: 1,
     img: "/images/dragon_1.jpg",
     name: "Tanmay",
+    link: "https://myvendex.com/",
     description:
       "Developed an AI-powered soap formula that enhanced skin hydration while reducing environmental impact.",
   },
@@ -18,6 +20,7 @@ const images = [
     id: 2,
     name: "Gaurav",
     img: "/images/dragon_2.jpg",
+    link: "https://minimal-india-final.vercel.app/",
     description:
       "Created a sustainable soap using AI-driven ingredient optimization, improving both cost efficiency and quality.",
   },
@@ -25,6 +28,7 @@ const images = [
     id: 3,
     name: "Rugved",
     img: "/images/dragon_3.jpg",
+    link: "https://my-vendex1.vercel.app/",
     description:
       "Designed an AI-based fragrance infusion technique that customizes scents based on user preferences.",
   },
@@ -32,6 +36,7 @@ const images = [
     id: 4,
     name: "Varun",
     img: "/images/dragon_4.jpg",
+    link: "https://myvendex.com/",
     description:
       "Implemented a machine learning model to predict ideal soap compositions for different skin types.",
   },
@@ -39,6 +44,7 @@ const images = [
     id: 5,
     name: "Shruti",
     img: "/images/dragon_5.jpg",
+    link: "https://myvendex.com/",
     description:
       "Engineered an AI-driven supply chain that reduced soap production waste by 30%.",
   },
@@ -46,6 +52,7 @@ const images = [
     id: 6,
     name: "Pranav",
     img: "/images/dragon_6.jpg",
+    link: "https://myvendex.com/",
     description:
       "Developed a deep learning algorithm to analyze customer feedback and refine soap formulas in real time.",
   },
@@ -53,6 +60,7 @@ const images = [
     id: 7,
     name: "Yash",
     img: "/images/dragon_7.jpg",
+    link: "https://myvendex.com/",
     description:
       "Used generative AI to create unique soap designs and textures for a personalized skincare experience.",
   },
@@ -60,6 +68,7 @@ const images = [
     id: 8,
     name: "Sanket",
     img: "/images/dragon_8.jpg",
+    link: "https://myvendex.com/",
     description:
       "Created an AI-powered chatbot that recommends the best soap based on skin analysis and climate data.",
   },
@@ -67,6 +76,7 @@ const images = [
     id: 9,
     name: "Tejas",
     img: "/images/dragon_9.jpg",
+    link: "https://myvendex.com/",
     description:
       "Designed a blockchain-integrated AI system to ensure transparency in sourcing organic soap ingredients.",
   },
@@ -106,7 +116,7 @@ const CircularImageCarousel = () => {
   ];
 
   return (
-    <div id="tech" className="w-full overflow-hidden bg-black">
+    <div id="tech" className="w-full overflow-hidden bg-black pt-12">
       <motion.div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto pt-5 bg-black flex flex-col justify-center items-center">
         {/* <h1 className="text-white lg:text-[80px] text-[60px]  mx-auto leading-none font-bold mt-14 text-center">
           Code with clarity
@@ -257,6 +267,11 @@ const CircularImageCarousel = () => {
               </motion.p>
             </div>
           </div>
+        </div>
+        <div className="absolute mt-14">
+          <DrawOutlineButton link={images[currentIndex].link}>
+            Link
+          </DrawOutlineButton>
         </div>
 
         {/* Navigation Buttons */}

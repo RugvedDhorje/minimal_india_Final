@@ -115,7 +115,7 @@ const ImageGrid: React.FC<CardProps> = ({ card }) => {
   const displayImages = card.content.slice(0, 7);
 
   return (
-    <div className="grid grid-cols-5 grid-rows-3 gap-4 h-[600px] w-full">
+    <div className="grid grid-cols-5 grid-rows-3 gap-4 h-[500px] w-full">
       {gridLayout.slice(0, displayImages.length).map((layout, idx) => (
         <motion.div
           key={idx}

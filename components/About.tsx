@@ -7,7 +7,7 @@ export default function About() {
     <div className="w-full mx-auto bg-black">
       <div className="w-full max-w-screen-2xl mx-auto">
         <h4 className="text-white text-[30px] font-light text-center pt-10 pb-6">
-          Trusted By Industry Leaders
+          Trusted by Industry Leaders
         </h4>
       </div>
       <div className="rounded-md flex flex-col antialiased bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
@@ -33,7 +33,7 @@ export default function About() {
             </div>
           </div>
           <div className="h-[500px] sm:w-7/12 md:w-8/12 w-full mt-4 my-6 rounded-3xl bg-gradient-to-b from-black via-black to-[#202020] flex justify-center items-center">
-            <h2 className="lg:text-[70px] md:text-[50px] text-[40px] tracking-wide font-semibold text-center mt-20 text-white">
+            <h2 className="lg:text-[70px] md:text-[50px] text-[40px] tracking-wide font-semibold text-center text-white">
               <span className="animate-colorChange">&quot;</span>
               We Don&apos;t Just Create,
               <br /> We Dominate

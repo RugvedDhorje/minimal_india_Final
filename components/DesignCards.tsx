@@ -1,119 +1,120 @@
-"use client";
 import React, { useState } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { motion, AnimatePresence } from "framer-motion";
-import { IconX } from "@tabler/icons-react";
+import ImageGrid from "./ImageGrid";
 
-const info = [
+const data = [
   {
-    id: 1,
-    title: "Title 1",
-    Profile: "/images/1696858826722.jpg",
-    video: "/WhatsApp Video 2025-03-06 at 1.20.25 PM.mp4",
-    description:
-      "A leading company that specializes in providing advanced technology and sustainable practices to solve modern challenges.",
-    companyName: "Acme Corporation",
-    about:
-      "Acme Corporation is a global leader in innovative solutions for various industries, focusing on state-of-the-art technologies and sustainable business models.",
+    id: "1",
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: "/21 DESIGN MINIMAL INDIAN .jpg",
+    content: [
+      "/set 3/20 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/16 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/17 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/18 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/19 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/22 DESIGN MINIMAL INDIAN .jpg",
+      "/set 3/23 DESIGN MINIMAL INDIAN .jpg",
+    ],
   },
   {
-    id: 2,
-    title: "Title 2",
-    Profile: "/images/4611023cdfc1d96c5bc7486cdc08ada9.png",
-    video: "/flim video-2.mp4",
-    description:
-      "Experts in digital transformation, offering services like software development and cloud solutions to drive business success.",
-    companyName: "TechNest Solutions",
-    about:
-      "TechNest Solutions offers cutting-edge IT services, including software development, cloud solutions, and digital transformation strategies tailored for businesses of all sizes.",
+    id: "2",
+    category: "Productivity",
+    title: "Enhance your productivity.",
+    src: "/CARD 30 DESIGN MINIMAL INDIAN  copy.jpg",
+    content: [
+      "/set 1/14 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/15 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/30 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/31 DESIGN MINIMAL INDIAN .jpg",
+      "/set 1/32 DESIGN MINIMAL INDIAN .jpg",
+      "/img4.png",
+      "/img2.jpg",
+    ],
   },
   {
-    id: 3,
-    title: "Title 3",
-    Profile: "/images/original-eb6e8ee8227e5464dce39146e8e7da54.png",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
-    description:
-      "A trailblazer in research and development, introducing groundbreaking technologies for a sustainable future.",
-    companyName: "Global Innovations Ltd.",
-    about:
-      "Global Innovations Ltd. pioneers in research and development, focusing on creating technologies that redefine the way industries operate and grow.",
+    id: "3",
+    category: "Product",
+    title: "Launching the new Apple Vision Pro.",
+    src: "/CARD 9 DESIGN MINIMAL INDIAN .jpg",
+    content: [
+      "/set 4/4 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/5 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/6 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/7 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/10 DESIGN MINIMAL INDIAN .jpg",
+      "/set 4/11 DESIGN MINIMAL INDIAN .jpg",
+    ],
+  },
+
+  {
+    id: "4",
+    category: "Product",
+    title: "Maps for your iPhone 15 Pro Max.",
+    src: "/set 2/26 DESIGN MINIMAL INDIAN .jpg",
+    content: [
+      "/set 2/1 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/2 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/26 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/24 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/27 DESIGN MINIMAL INDIAN .jpg",
+      "/set 2/25 DESIGN MINIMAL INDIAN .jpg",
+    ],
   },
   {
-    id: 4,
-    title: "Title 4",
-    Profile: "/homeBg.jpg",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
-    description:
-      "Renowned for providing consultancy services, specializing in business analytics and market strategy.",
-    companyName: "VistaTech Enterprises",
-    about:
-      "VistaTech Enterprises provides comprehensive consultancy services, excelling in market research, business analytics, and strategic planning to help businesses thrive.",
+    id: "5",
+    category: "iOS",
+    title: "Photography just got better.",
+    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: [
+      "/img1 (1).jpg",
+      "/img2.jpg",
+      "/img3.jpg",
+      "/img1 (1).jpg",
+      "/img4.png",
+      "/img2.jpg",
+    ],
   },
   {
-    id: 5,
-    title: "Title 5",
-    Profile: "/QR_code.png",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
-    description:
-      "An energy-focused company delivering cutting-edge renewable energy solutions to global markets.",
-    companyName: "Fusion Dynamics Inc.",
-    about:
-      "Fusion Dynamics Inc. combines expertise in renewable energy with sustainable practices, helping businesses transition to greener energy solutions.",
-  },
-  {
-    id: 6,
-    title: "Title 6",
-    Profile: "/img2.jpg",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
-    description:
-      "A tech giant offering solutions in cybersecurity, AI-driven analytics, and enterprise-grade software development.",
-    companyName: "AlphaWave Technologies",
-    about:
-      "AlphaWave Technologies delivers cutting-edge solutions in cybersecurity, AI-driven data analytics, and software development to enhance operational efficiency.",
-  },
-  {
-    id: 7,
-    title: "Title 7",
-    Profile: "/img3.jpg",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
-    description:
-      "Dedicated to healthcare innovation, specializing in medical devices and diagnostics for improved patient care.",
-    companyName: "NexGen Innovations",
-    about:
-      "NexGen Innovations advances healthcare technology with a focus on medical devices, diagnostics, and transformative patient care solutions.",
-  },
-  {
-    id: 8,
-    title: "Title 8",
-    Profile: "/img4.png",
-    video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
-    description:
-      "A leader in biotechnology, focusing on genetic research and pharmaceutical development for personalized medicine.",
-    companyName: "InnovaSphere Labs",
-    about:
-      "InnovaSphere Labs leads the way in biotechnology, specializing in genetic research, drug development, and innovative personalized healthcare solutions.",
+    id: "6",
+    category: "Hiring",
+    title: "Hiring for a Staff Software Engineer",
+    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: [
+      "/img1 (1).jpg",
+      "/img2.jpg",
+      "/img3.jpg",
+      "/img1 (1).jpg",
+      "/img4.png",
+      "/img2.jpg",
+    ],
   },
 ];
 
-function DesignCards() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [selectedCard, setSelectedCard] = useState<any | null>(null);
+function MultipleItems() {
+  const [selectedItem, setSelectedItem] = useState<(typeof data)[0] | null>(
+    null
+  );
+  const [showPopup, setShowPopup] = useState(false);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleCardClick = (item: any) => {
+    setSelectedItem(item);
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+    setSelectedItem(null);
+  };
   const settings = {
     infinite: true,
+    dots: true,
     slidesToShow: 3,
     swipeToSlide: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToScroll: 1,
     responsive: [
       {
@@ -130,116 +131,80 @@ function DesignCards() {
       },
     ],
   };
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleCardClick = (item: any) => {
-    setSelectedCard(item);
-  };
-
-  const handleClosePopup = () => {
-    setSelectedCard(null);
-  };
-
   return (
-    <div className="w-11/12 lg:max-w-screen-2xl md:max-w-screen-lg mx-auto py-10 ">
-      <Slider {...settings}>
-        {info.map((item) => (
-          <div
-            key={item.id}
-            className="px-2 group flex justify-center items-center"
-            onClick={() => handleCardClick(item)}
-          >
-            <motion.h4
-              initial={{ x: 100 }}
-              whileInView={{ x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-white absolute z-50 text-[32px] hidden group-hover:block pl-[150px] top-[100px]"
-            >
-              Yezdi
-            </motion.h4>
-            {/* Centered Name */}
-
+    <>
+      <div className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto py-10">
+        <Slider {...settings}>
+          {data.map((item) => (
             <div
-              className="relative h-72 rounded-lg overflow-hidden cursor-pointer bg-black hover:opacity-90"
-              style={{
-                backgroundImage: `url(${item.Profile})`,
-                backgroundSize: "cover",
-                borderRadius: "10px",
-              }}
-              onMouseEnter={() => setHoveredCard(item.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+              key={item.id}
+              className="px-2 group flex justify-center items-center"
+              onClick={() => handleCardClick(item)}
             >
-              <video
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out group-hover:blur-[3px] ${
-                  hoveredCard === item.id ? "block" : "hidden"
-                }`}
-                autoPlay
-                muted
-                loop
-                style={{
-                  borderRadius: "10px",
-                }}
-              >
-                <source src={item.video} type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        ))}
-      </Slider>
+              <div className="relative overflow-hidden w-full h-full">
+                <div className="relative w-full h-full">
+                  {/* Fixed size container for images */}
+                  <div
+                    className="w-full h-72 relative overflow-hidden"
+                    style={{
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <img
+                      src={item.src}
+                      alt="Thumbnail"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
+                      style={{
+                        borderRadius: "10px",
+                      }}
+                    />
 
-      <AnimatePresence>
-        {selectedCard && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-            >
-              <button
-                onClick={handleClosePopup}
-                className="absolute top-4 right-4 z-60 bg-black text-white hover:bg-white hover:text-black duration-300 rounded-full p-2"
-              >
-                <IconX className="h-6 w-6" />
-              </button>
-
-              <div className=" gap-6 ">
-                {/* Video Section */}
-                <div className="w-full h-[500px] rounded-xl overflow-hidden">
-                  <video
-                    src={selectedCard.video}
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    controls
-                    muted
-                  />
-                </div>
-
-                {/* Details Section */}
-                {/* <div className="space-y-4">
-                  <h2 className="text-3xl font-bold text-gray-900">
-                    {selectedCard.companyName}
-                  </h2>
-                  <p className="text-xl text-gray-700">
-                    {selectedCard.description}
-                  </p>
-                  <div className="bg-gray-100 p-4 rounded-xl">
-                    <h3 className="text-xl font-semibold mb-2">About</h3>
-                    <p className="text-gray-600">{selectedCard.about}</p>
+                    {/* Overlay text that appears on hover */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-[20px] p-4 rounded">
+                        {item.title || "View Details"}
+                      </p>
+                    </div>
                   </div>
-                </div> */}
+                </div>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+      {/* Popup Overlay */}
+      {showPopup && selectedItem && (
+        <div
+          className="fixed inset-0 top-20 flex items-center justify-center z-50"
+          onClick={closePopup}
+        >
+          {/* Popup Content */}
+          <div
+            className="bg-[#FFFBF3] rounded-lg px-4 pb-4 w-[900px] mx-4 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              borderRadius: "10px",
+            }}
+          >
+            <div className="flex items-end justify-end">
+              <button
+                onClick={closePopup}
+                className="text-black text-[30px] font-bold"
+              >
+                &times;
+              </button>
+            </div>
+            <ImageGrid
+              card={{
+                title: selectedItem?.title ?? "",
+                content: selectedItem?.content ?? [],
+              }}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
-export default DesignCards;
+export default MultipleItems;
