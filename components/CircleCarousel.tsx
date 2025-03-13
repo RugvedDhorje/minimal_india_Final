@@ -10,75 +10,75 @@ import DrawOutlineButton from "./DrawOutlineButton";
 const images = [
   {
     id: 1,
-    img: "/images/dragon_1.jpg",
-    name: "Tanmay",
-    link: "https://myvendex.com/",
+    img: "/tech/Trusted-Online-Jewelry-Store-India-Buy-Kisna-Real-Diamond-Gold-Online.png",
+    name: "KISNA",
+    link: "https://kisna.com/",
     description:
-      "Developed an AI-powered soap formula that enhanced skin hydration while reducing environmental impact.",
+      "A trusted jewelry brand offering exquisite diamond and gold designs for timeless elegance.",
   },
   {
     id: 2,
-    name: "Gaurav",
-    img: "/images/dragon_2.jpg",
-    link: "https://minimal-india-final.vercel.app/",
+    name: "VERYMISS",
+    img: "/tech/Verymiss.png",
+    link: "https://verymiss.in/",
     description:
-      "Created a sustainable soap using AI-driven ingredient optimization, improving both cost efficiency and quality.",
+      " An online destination for trendy fashion, accessories, and lifestyle products tailored for modern women.",
   },
   {
     id: 3,
-    name: "Rugved",
-    img: "/images/dragon_3.jpg",
-    link: "https://my-vendex1.vercel.app/",
+    name: "TOG & TRIM",
+    img: "/tech/Online-Clothing-Store-for-Men-amp-Women-Accessories-Tog-Trim-–-Tog-and-Trim-Ecommerce-LLP.png",
+    link: "https://togandtrim.com/",
     description:
-      "Designed an AI-based fragrance infusion technique that customizes scents based on user preferences.",
+      "A premium grooming and styling brand offering high-quality products for a polished and refined look.",
   },
   {
     id: 4,
-    name: "Varun",
-    img: "/images/dragon_4.jpg",
-    link: "https://myvendex.com/",
+    name: "SAGAR GASES",
+    img: "/tech/sagargases.png",
+    link: "https://www.sagargases.com/",
     description:
-      "Implemented a machine learning model to predict ideal soap compositions for different skin types.",
+      "A leading provider of industrial and medical gases, ensuring safety and reliability for diverse applications.",
   },
   {
     id: 5,
-    name: "Shruti",
-    img: "/images/dragon_5.jpg",
-    link: "https://myvendex.com/",
+    name: "WALKENT",
+    img: "/tech/Walkent-Travel-Laptop-Sling-Sleeve-Messenger-Bags-Backpacks.png",
+    link: "https://www.walkent.com/",
     description:
-      "Engineered an AI-driven supply chain that reduced soap production waste by 30%.",
+      "A modern and premium leather bags, ensuring a seamless shopping experience with intuitive navigation and engaging visuals.",
   },
   {
     id: 6,
-    name: "Pranav",
-    img: "/images/dragon_6.jpg",
-    link: "https://myvendex.com/",
+    name: "KITCHEN SECRET",
+    img: "/tech/Kitchen-Secret-Dips-Sauces-and-Chutneys-Best-Seller.png",
+    link: "https://kitchensecret.in/",
     description:
-      "Developed a deep learning algorithm to analyze customer feedback and refine soap formulas in real time.",
+      "A culinary platform offering curated recipes, cooking tips, and kitchen hacks to inspire home chefs and simplify meal preparation.",
   },
   {
     id: 7,
-    name: "Yash",
-    img: "/images/dragon_7.jpg",
-    link: "https://myvendex.com/",
+    name: "THE SOCCER TALES",
+    img: "/tech/Award-Winning-Books-for-Teens-Soccer-Players-Soccer-Coloring-Book-–-thesoccertales.png",
+    link: "https://thesoccertales.com/",
     description:
-      "Used generative AI to create unique soap designs and textures for a personalized skincare experience.",
+      "A hub for soccer enthusiasts, featuring news, stories, and insights about the world of football.",
   },
   {
     id: 8,
-    name: "Sanket",
-    img: "/images/dragon_8.jpg",
-    link: "https://myvendex.com/",
+    name: "REGENERATIO",
+    img: "/tech/Regeneratio.png",
+    link: "https://www.regeneratio.co/",
     description:
-      "Created an AI-powered chatbot that recommends the best soap based on skin analysis and climate data.",
+      "A wellness brand focused on natural and sustainable health solutions for rejuvenation and self-care.",
   },
   {
     id: 9,
-    name: "Tejas",
-    img: "/images/dragon_9.jpg",
-    link: "https://myvendex.com/",
+    name: "PUNE SPICE",
+    img: "/tech/Screenshot 2025-03-13 125445.png",
+    link: "https://punespice.com/",
     description:
-      "Designed a blockchain-integrated AI system to ensure transparency in sourcing organic soap ingredients.",
+      "A culinary platform celebrating the rich flavors of Indian cuisine with authentic spices and recipes.",
   },
 ];
 
@@ -173,7 +173,7 @@ const CircularImageCarousel = () => {
               <img
                 src={images[currentIndex].img}
                 alt={images[currentIndex].name}
-                className="w-full h-full rounded-full object-cover  "
+                className="w-full h-full rounded-full object-fit"
               />
             </div>
 
@@ -251,7 +251,7 @@ const CircularImageCarousel = () => {
               initial={{ x: -50 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white sm:text-[36px] text-[24px] font-semibold lg:mb-2 text-center sm:mt-5 mt-10"
+              className="text-white sm:text-[34px] text-[24px] font-semibold lg:mb-2 text-center sm:mt-5 mt-10"
             >
               {images[currentIndex].name}
             </motion.h2>
@@ -261,7 +261,7 @@ const CircularImageCarousel = () => {
                 initial={{ x: -50 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-base text-[16px] md:text-[24px] font-normal md:leading-7 leading-tight text-white text-center px-5"
+                className="text-base text-[16px] md:text-[22px] font-normal md:leading-7 leading-tight text-white text-center px-5"
               >
                 {images[currentIndex].description}
               </motion.p>

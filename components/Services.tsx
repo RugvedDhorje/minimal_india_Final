@@ -199,7 +199,7 @@ export default function Services() {
             </div>
           </div>
           <div className="sm:w-1/2 w-full mt-5 sm:mt-0  mb-[50px] sm:mb-0">
-            <div className="lg:py-[100px] md:p-[80px] w-full  md:mx-5 sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
+            <div className="lg:py-[90px] md:p-[80px] w-full  md:mx-5 sm:border-l sm:border-t sm:border-gray-700 rounded-tl-[70px]">
               <motion.h4
                 initial={{ x: 100 }}
                 whileInView={{ x: 0 }}
