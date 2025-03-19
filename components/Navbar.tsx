@@ -131,6 +131,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import EncryptButton from "./EncryptButton";
+import ContactForm from "./ContactForm";
 
 export default function Navbar() {
   const scrollThreshold = 50;
@@ -238,44 +239,7 @@ export default function Navbar() {
         </div>
       </nav>
       {/* Popup Form */}
-      {showForm && (
-        <div
-          className="fixed inset-0 bg-black backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50"
-          onClick={() => setShowForm(false)}
-        >
-          <div
-            className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button (Top Right) */}
-            <button
-              className="absolute top-2 right-2 text-gray-700 hover:text-black"
-              onClick={() => setShowForm(false)}
-            >
-              <X size={24} />
-            </button>
-
-            <h2 className="text-xl font-semibold mb-4">Get In Touch</h2>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-2 border border-gray-300 rounded mb-2"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-2 border border-gray-300 rounded mb-2"
-            />
-            <textarea
-              placeholder="Your Message"
-              className="w-full p-2 border border-gray-300 rounded mb-2"
-            ></textarea>
-            <button className="w-full bg-gray-700 text-white p-2 rounded mb-2">
-              Submit
-            </button>
-          </div>
-        </div>
-      )}
+      {showForm && <ContactForm onclose={() => setShowForm(false)} />}
 
       {/* Mobile Navigation Menu */}
       {navOpen && (

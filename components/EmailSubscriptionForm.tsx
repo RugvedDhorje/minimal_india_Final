@@ -22,7 +22,14 @@ const EmailSubscriptionForm = () => {
         <Label htmlFor="email" className="text-white">
           Email Address
         </Label>
-        <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+        <Input
+          id="email"
+          placeholder="projectmayhem@fc.com"
+          type="email"
+          style={{
+            borderRadius: "10px",
+          }}
+        />
       </LabelInputContainer>
 
       <label
@@ -44,6 +51,9 @@ const EmailSubscriptionForm = () => {
         {/* Submit Button */}
         <button
           className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+          style={{
+            borderRadius: "10px",
+          }}
           type="submit"
         >
           <span className="text-neutral-700 dark:text-neutral-300 text-md">

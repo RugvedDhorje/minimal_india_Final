@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Services from "@/components/Services";
 import { Tech } from "@/components/Tech";
+import TopButton from "@/components/TopButton";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
       ) : (
         <div className="w-full mx-auto">
           <HomePage />
+          <TopButton />
           <Services />
           <Tech />
           <FilmSection />
