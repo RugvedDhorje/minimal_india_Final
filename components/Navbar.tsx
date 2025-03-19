@@ -164,14 +164,21 @@ export default function Navbar() {
           {/* Logo */}
           <div className="text-2xl font-bold text-gray-800">
             <Link to="home" smooth={true} duration={500}>
-              <motion.h2
+              {/* <motion.h2
                 initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-black font-extralight lg:text-[30px] md:text-[24px] text-[20px] cursor-pointer"
               >
                 MINIMAL INDIA
-              </motion.h2>
+              </motion.h2> */}
+              <video
+                src="/main logo.mp4"
+                autoPlay
+                loop
+                muted
+                className="w-auto h-7"
+              ></video>
             </Link>
           </div>
 

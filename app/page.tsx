@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3700);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
   return (
@@ -34,13 +34,13 @@ export default function Home() {
 
           {/* Desktop Video */}
           <source
-            src="/Minimal India (Open 16-9).mp4"
+            src="/opening video.mp4"
             type="video/mp4"
             media="(min-width: 1025px)"
           />
 
           {/* Fallback Video */}
-          <source src="/Minimal India (Open 16-9).mp4" type="video/mp4" />
+          <source src="/opening video.mp4" type="video/mp4" />
         </video>
       ) : (
         <div className="w-full mx-auto">
