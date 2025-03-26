@@ -436,8 +436,10 @@ const info = [
   {
     id: 1,
     title: "Title 1",
-    Profile: "/images/1696858826722.jpg",
-    video: "/WhatsApp Video 2025-03-06 at 1.20.25 PM.mp4",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396024/company_images/tox35pyji8fzr6wmcuo8.png",
+    video:
+      "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989586/WhatsApp_Video_2025-03-06_at_1.20.25_PM_phbilw.mp4",
     description:
       "A leading company that specializes in providing advanced technology and sustainable practices to solve modern challenges.",
     companyName: "Acme Corporation",
@@ -447,8 +449,10 @@ const info = [
   {
     id: 2,
     title: "Title 2",
-    Profile: "/images/4611023cdfc1d96c5bc7486cdc08ada9.png",
-    video: "/flim video-2.mp4",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396019/company_images/r2iqsibqpm4yvjkalksj.png",
+    video:
+      "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989590/flim_video-2_htfm6n.mp4",
     description:
       "Experts in digital transformation, offering services like software development and cloud solutions to drive business success.",
     companyName: "TechNest Solutions",
@@ -458,9 +462,10 @@ const info = [
   {
     id: 3,
     title: "Title 3",
-    Profile: "/images/original-eb6e8ee8227e5464dce39146e8e7da54.png",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740294795/company_images/ioacl7ln5plbkw3nwkeh.png",
     video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
+      "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989540/WhatsApp_Video_2025-03-19_at_12.35.53_PM_1_jruirk.mp4",
     description:
       "A trailblazer in research and development, introducing groundbreaking technologies for a sustainable future.",
     companyName: "Global Innovations Ltd.",
@@ -470,9 +475,10 @@ const info = [
   {
     id: 4,
     title: "Title 4",
-    Profile: "/homeBg.jpg",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396025/company_images/u3ubxp3n4nnimeqiaibz.png",
     video:
-      "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
+      "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742990189/WhatsApp_Video_2025-03-19_at_12.32.45_PM_lmovba.mp4",
     description:
       "Renowned for providing consultancy services, specializing in business analytics and market strategy.",
     companyName: "VistaTech Enterprises",
@@ -482,7 +488,8 @@ const info = [
   {
     id: 5,
     title: "Title 5",
-    Profile: "/QR_code.png",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740459013/company_images/psucr1kxl2frfbun3ity.jpg",
     video:
       "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
@@ -494,7 +501,8 @@ const info = [
   {
     id: 6,
     title: "Title 6",
-    Profile: "/img2.jpg",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740371166/company_images/imuuz4av2lk4g8zmlc7s.png",
     video:
       "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
@@ -506,7 +514,8 @@ const info = [
   {
     id: 7,
     title: "Title 7",
-    Profile: "/img3.jpg",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740294347/company_images/x6o2ebs5f3nkpag8bo3h.jpg",
     video:
       "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:
@@ -518,7 +527,8 @@ const info = [
   {
     id: 8,
     title: "Title 8",
-    Profile: "/img4.png",
+    Profile:
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1739387481/company_images/olgnlx69nlgvut8w10cd.jpg",
     video:
       "https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4",
     description:

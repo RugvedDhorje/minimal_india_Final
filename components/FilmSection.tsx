@@ -13,7 +13,7 @@ export default function FilmSection() {
           }}
         >
           <video
-            src="https://videos.pexels.com/video-files/2795382/2795382-uhd_2560_1440_25fps.mp4"
+            src="https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989540/WhatsApp_Video_2025-03-19_at_12.35.53_PM_1_jruirk.mp4"
             autoPlay
             loop
             muted

@@ -10,7 +10,7 @@ import DrawOutlineButton from "./DrawOutlineButton";
 const images = [
   {
     id: 1,
-    img: "/tech/Trusted-Online-Jewelry-Store-India-Buy-Kisna-Real-Diamond-Gold-Online.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990241/Trusted-Online-Jewelry-Store-India-Buy-Kisna-Real-Diamond-Gold-Online_ejh0p9.png",
     name: "KISNA",
     link: "https://kisna.com/",
     description:
@@ -19,7 +19,7 @@ const images = [
   {
     id: 2,
     name: "VERYMISS",
-    img: "/tech/Verymiss.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990243/Verymiss_mzm2ns.png",
     link: "https://verymiss.in/",
     description:
       " An online destination for trendy fashion, accessories, and lifestyle products tailored for modern women.",
@@ -27,7 +27,7 @@ const images = [
   {
     id: 3,
     name: "TOG & TRIM",
-    img: "/tech/Online-Clothing-Store-for-Men-amp-Women-Accessories-Tog-Trim-–-Tog-and-Trim-Ecommerce-LLP.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990235/Online-Clothing-Store-for-Men-amp-Women-Accessories-Tog-Trim-_-Tog-and-Trim-Ecommerce-LLP_bvo5au.png",
     link: "https://togandtrim.com/",
     description:
       "A premium grooming and styling brand offering high-quality products for a polished and refined look.",
@@ -35,7 +35,7 @@ const images = [
   {
     id: 4,
     name: "SAGAR GASES",
-    img: "/tech/sagargases.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990238/sagargases_lrcdio.png",
     link: "https://www.sagargases.com/",
     description:
       "A leading provider of industrial and medical gases, ensuring safety and reliability for diverse applications.",
@@ -43,7 +43,7 @@ const images = [
   {
     id: 5,
     name: "WALKENT",
-    img: "/tech/Walkent-Travel-Laptop-Sling-Sleeve-Messenger-Bags-Backpacks.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990244/Walkent-Travel-Laptop-Sling-Sleeve-Messenger-Bags-Backpacks_qldkid.png",
     link: "https://www.walkent.com/",
     description:
       "A modern and premium leather bags, ensuring a seamless shopping experience with intuitive navigation and engaging visuals.",
@@ -51,7 +51,7 @@ const images = [
   {
     id: 6,
     name: "KITCHEN SECRET",
-    img: "/tech/Kitchen-Secret-Dips-Sauces-and-Chutneys-Best-Seller.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990234/Kitchen-Secret-Dips-Sauces-and-Chutneys-Best-Seller_psq12w.png",
     link: "https://kitchensecret.in/",
     description:
       "A culinary platform offering curated recipes, cooking tips, and kitchen hacks to inspire home chefs and simplify meal preparation.",
@@ -59,7 +59,7 @@ const images = [
   {
     id: 7,
     name: "THE SOCCER TALES",
-    img: "/tech/Award-Winning-Books-for-Teens-Soccer-Players-Soccer-Coloring-Book-–-thesoccertales.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990232/Award-Winning-Books-for-Teens-Soccer-Players-Soccer-Coloring-Book-_-thesoccertales_o3gmdm.png",
     link: "https://thesoccertales.com/",
     description:
       "A hub for soccer enthusiasts, featuring news, stories, and insights about the world of football.",
@@ -67,7 +67,7 @@ const images = [
   {
     id: 8,
     name: "REGENERATIO",
-    img: "/tech/Regeneratio.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990236/Regeneratio_itvibl.png",
     link: "https://www.regeneratio.co/",
     description:
       "A wellness brand focused on natural and sustainable health solutions for rejuvenation and self-care.",
@@ -75,7 +75,7 @@ const images = [
   {
     id: 9,
     name: "PUNE SPICE",
-    img: "/tech/Screenshot 2025-03-13 125445.png",
+    img: "https://res.cloudinary.com/dwh14vxwc/image/upload/v1742990239/Screenshot_2025-03-13_125445_rntw3u.png",
     link: "https://punespice.com/",
     description:
       "A culinary platform celebrating the rich flavors of Indian cuisine with authentic spices and recipes.",

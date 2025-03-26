@@ -68,7 +68,10 @@ export function Tech() {
           }}
           className="w-full hidden sm:block mx-auto overflow-hidden bg-black"
         >
-          <MacbookScroll src={`/1739448852325344.mp4`} showGradient={false} />
+          <MacbookScroll
+            src={`https://res.cloudinary.com/dwh14vxwc/video/upload/v1743015069/1739448852325344_qwqkgt.mp4`}
+            showGradient={false}
+          />
         </motion.div>
 
         <CircularImageCarousel />
