@@ -589,9 +589,7 @@ function MultipleItems() {
               initial={{ x: 100 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl hidden group-hover:block bg-black bg-opacity-20 
-             top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-              // className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl  hidden group-hover:block bg-black px-3 bg-opacity-20 ml-[150px] top-[100px]"
+              className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl  hidden group-hover:block bg-black px-3 bg-opacity-20 ml-[150px] top-[100px]"
             >
               {item.title}
             </motion.h4>
