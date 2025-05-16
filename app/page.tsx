@@ -21,14 +21,14 @@ export default function Home() {
         <video autoPlay muted className="w-full h-screen object-cover">
           {/* Mobile Video */}
           <source
-            src="/Minimal India mobile.mp4"
+            src="/Mi logo animation 9-16.mp4"
             type="video/mp4"
             media="(max-width: 640px)"
           />
 
           {/* Tablet Video */}
           <source
-            src="/Minimal India tablet.mp4"
+            src="/Mi logo animation 4-3.mp4"
             type="video/mp4"
             media="(min-width: 641px) and (max-width: 1024px)"
           />

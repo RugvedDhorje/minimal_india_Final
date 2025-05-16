@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import ImageGrid from "./ImageGrid";
+import { CSSProperties } from "react";
 
 const data = [
   {
@@ -91,6 +92,44 @@ const data = [
     ],
   },
 ];
+interface ArrowProps {
+  className?: string;
+  style?: CSSProperties;
+  onClick?: () => void;
+}
+const PrevArrow = ({ onClick }: ArrowProps) => (
+  <div
+    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-black rounded-full shadow-md p-2"
+    onClick={onClick}
+  >
+    <svg
+      className="w-6 h-6 text-white"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </div>
+);
+
+const NextArrow = ({ onClick }: ArrowProps) => (
+  <div
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-black rounded-full shadow-md p-2"
+    onClick={onClick}
+  >
+    <svg
+      className="w-6 h-6 text-white"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+);
 
 function MultipleItems() {
   const [selectedItem, setSelectedItem] = useState<(typeof data)[0] | null>(
@@ -116,6 +155,8 @@ function MultipleItems() {
     autoplay: true,
     autoplaySpeed: 2000,
     slidesToScroll: 1,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
