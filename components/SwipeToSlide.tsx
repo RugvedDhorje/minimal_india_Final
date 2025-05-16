@@ -435,7 +435,7 @@ import { IconX } from "@tabler/icons-react";
 const info = [
   {
     id: 1,
-    title: "Title 1",
+    title: "Yezdi",
     Profile:
       "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396024/company_images/tox35pyji8fzr6wmcuo8.png",
     video:
@@ -448,7 +448,7 @@ const info = [
   },
   {
     id: 2,
-    title: "Title 2",
+    title: "Velvet Sky",
     Profile:
       "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396019/company_images/r2iqsibqpm4yvjkalksj.png",
     video:
@@ -461,7 +461,7 @@ const info = [
   },
   {
     id: 3,
-    title: "Title 3",
+    title: "Nic",
     Profile:
       "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740294795/company_images/ioacl7ln5plbkw3nwkeh.png",
     video:
@@ -474,7 +474,7 @@ const info = [
   },
   {
     id: 4,
-    title: "Title 4",
+    title: "Bajaj",
     Profile:
       "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396025/company_images/u3ubxp3n4nnimeqiaibz.png",
     video:
@@ -535,7 +535,7 @@ const info = [
       "A leader in biotechnology, focusing on genetic research and pharmaceutical development for personalized medicine.",
     companyName: "InnovaSphere Labs",
     about:
-      "InnovaSphere Labs leads the way in biotechnology, specializing in genetic research, drug development, and innovative personalized healthcare solutions.",
+      "Sphere Labs leads the way in biotechnology, specializing in genetic research, drug development, and innovative personalized healthcare solutions.",
   },
 ];
 
@@ -589,9 +589,9 @@ function MultipleItems() {
               initial={{ x: 100 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white absolute z-50 text-[32px] hidden group-hover:block pl-[150px] top-[100px]"
+              className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl  hidden group-hover:block bg-black px-3 bg-opacity-20 ml-[150px] top-[100px]"
             >
-              Yezdi
+              {item.title}
             </motion.h4>
             {/* Centered Name */}
 

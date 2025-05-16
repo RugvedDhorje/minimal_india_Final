@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
@@ -58,7 +57,7 @@ export const InfiniteMovingCards = ({
   };
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
+      if (speed === "slow") {
         containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
@@ -71,7 +70,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-screen-2xl w-11/12 rounded-full bg-gray-700 overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-screen-2xl w-11/12 rounded-full overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -83,17 +82,33 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, index) => (
+        {/* {items.map((item, index) => (
           <li
             className="w-[200px] max-w-full relative  px-4  md:w-[300px]  "
             key={index}
           >
-            {/* Image inside each list item */}
+            
             <img
               src={item.image} // Ensure `item.image` contains the image URL
               alt="Item Image"
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full object-cover rounded-lg h-20"
             />
+          </li>
+        ))} */}
+        {items.map((item, index) => (
+          <li
+            className="w-[200px] max-w-full relative px-4 md:w-[300px] flex items-center"
+            key={index}
+          >
+            {/* Image inside each list item */}
+            <img
+              src={item.image}
+              alt="Item Image"
+              className="w-full object-contain rounded-lg h-[120px] "
+            />
+
+            {/* Always show vertical line */}
+            {/* <div className="w-[2px] h-20 bg-gray-300 ml-4"></div> */}
           </li>
         ))}
       </ul>

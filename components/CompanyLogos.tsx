@@ -15,7 +15,7 @@ export function CompanyLogo() {
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
           transition={{ duration: 0.2, ease: "easeOut" }} // Smooth transition
-          src="/companyLogo.png"
+          src="https://res.cloudinary.com/dwh14vxwc/image/upload/v1747382607/7d_attgoa.png"
           alt="Logo 1"
           className="h-[80px] w-auto"
         />
@@ -23,7 +23,7 @@ export function CompanyLogo() {
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
           transition={{ duration: 0.3, ease: "easeOut" }} // Smooth transition
-          src="/companyLogo.png"
+          src="https://res.cloudinary.com/dwh14vxwc/image/upload/v1747382644/8d_k1slwg.png"
           alt="Logo 2"
           className="h-[80px]  w-auto"
         />
@@ -31,7 +31,7 @@ export function CompanyLogo() {
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
           transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition
-          src="/companyLogo.png"
+          src="https://res.cloudinary.com/dwh14vxwc/image/upload/v1747382645/9d_twbhz8.png"
           alt="Logo 3"
           className="h-[80px]  w-auto"
         />
@@ -39,7 +39,7 @@ export function CompanyLogo() {
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
           transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition
-          src="/companyLogo.png"
+          src="https://res.cloudinary.com/dwh14vxwc/image/upload/v1747382645/1a_ok73u5.png"
           alt="Logo 4"
           className="h-[80px]  w-auto"
         />
@@ -47,7 +47,87 @@ export function CompanyLogo() {
           initial={{ y: 100, opacity: 0 }} // Start position & invisible
           whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
           transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
-          src="/companyLogo.png"
+          src="/New folder/3a .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/3d .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/4a .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/4d .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/5a .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/5d .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/6a .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/6d .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/7d .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/8d .png"
+          alt="Logo 5"
+          className="h-[80px]  w-auto"
+        />
+        <motion.img
+          initial={{ y: 100, opacity: 0 }} // Start position & invisible
+          whileInView={{ y: 0, opacity: 1 }} // Moves up & fades in
+          transition={{ duration: 0.6, ease: "easeOut" }} // Smooth transition
+          src="/New folder/9d .png"
           alt="Logo 5"
           className="h-[80px]  w-auto"
         />
