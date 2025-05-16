@@ -437,7 +437,7 @@ const info = [
     id: 1,
     title: "Yezdi",
     Profile:
-      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396024/company_images/tox35pyji8fzr6wmcuo8.png",
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1747389965/Screenshot_2025-05-16_153521_zzwh6q.png",
     video:
       "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989586/WhatsApp_Video_2025-03-06_at_1.20.25_PM_phbilw.mp4",
     description:
@@ -450,7 +450,7 @@ const info = [
     id: 2,
     title: "Velvet Sky",
     Profile:
-      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396019/company_images/r2iqsibqpm4yvjkalksj.png",
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1747389995/Screenshot_2025-05-16_153340_a5nhbq.png",
     video:
       "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989590/flim_video-2_htfm6n.mp4",
     description:
@@ -463,7 +463,7 @@ const info = [
     id: 3,
     title: "Nic",
     Profile:
-      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740294795/company_images/ioacl7ln5plbkw3nwkeh.png",
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1747390365/Screenshot_2025-05-16_154025_ji2kcw.png",
     video:
       "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742989540/WhatsApp_Video_2025-03-19_at_12.35.53_PM_1_jruirk.mp4",
     description:
@@ -476,7 +476,7 @@ const info = [
     id: 4,
     title: "Bajaj",
     Profile:
-      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1740396025/company_images/u3ubxp3n4nnimeqiaibz.png",
+      "https://res.cloudinary.com/dwh14vxwc/image/upload/v1747390371/Screenshot_2025-05-16_154154_ar1xp9.png",
     video:
       "https://res.cloudinary.com/dwh14vxwc/video/upload/v1742990189/WhatsApp_Video_2025-03-19_at_12.32.45_PM_lmovba.mp4",
     description:
@@ -582,14 +582,16 @@ function MultipleItems() {
         {info.map((item) => (
           <div
             key={item.id}
-            className="px-2 group flex justify-center items-center"
+            className="px-2 group flex justify-center items-center relative"
             onClick={() => handleCardClick(item)}
           >
             <motion.h4
               initial={{ x: 100 }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl  hidden group-hover:block bg-black px-3 bg-opacity-20 ml-[150px] top-[100px]"
+              className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl hidden group-hover:block bg-black bg-opacity-20 
+             top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              // className="text-white absolute z-50 text-[32px] font-semibold rounded-2xl  hidden group-hover:block bg-black px-3 bg-opacity-20 ml-[150px] top-[100px]"
             >
               {item.title}
             </motion.h4>

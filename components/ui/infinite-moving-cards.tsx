@@ -97,7 +97,7 @@ export const InfiniteMovingCards = ({
         ))} */}
         {items.map((item, index) => (
           <li
-            className="w-[200px] max-w-full relative px-4 md:w-[300px] flex items-center"
+            className="w-[200px] max-w-full relative px-4 md:w-[300px] flex items-center rounded-2xl bg-white/10 backdrop-blur-sm backdrop-brightness-125 backdrop-contrast-150 p-6 shadow-lg"
             key={index}
           >
             {/* Image inside each list item */}
