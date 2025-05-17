@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ContactForm from "./ContactForm";
 
 const SpotlightButton = () => {
   const btnRef = useRef<HTMLButtonElement | null>(null);
   const spanRef = useRef<HTMLSpanElement | null>(null);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -39,22 +41,26 @@ const SpotlightButton = () => {
   }, []);
 
   return (
-    <motion.button
-      whileTap={{ scale: 0.985 }}
-      ref={btnRef}
-      className="relative w-full max-w-xs overflow-hidden rounded-lg bg-[#030406] px-7 py-3 text-lg font-medium text-white"
-      style={{
-        borderRadius: "7px",
-      }}
-    >
-      <span className="pointer-events-none relative z-10 mix-blend-difference">
-        Let’s Create Together
-      </span>
-      <span
-        ref={spanRef}
-        className="pointer-events-none absolute left-[50%] top-[50%] h-24 w-24 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100"
-      />
-    </motion.button>
+    <>
+      <motion.button
+        whileTap={{ scale: 0.985 }}
+        ref={btnRef}
+        onClick={() => setShowForm(true)}
+        className="relative w-full max-w-xs overflow-hidden rounded-lg bg-[#030406] px-7 py-3 text-lg font-medium text-white"
+        style={{
+          borderRadius: "7px",
+        }}
+      >
+        <span className="pointer-events-none relative z-10 mix-blend-difference">
+          Let’s Create Together
+        </span>
+        <span
+          ref={spanRef}
+          className="pointer-events-none absolute left-[50%] top-[50%] h-24 w-24 -translate-x-[50%] -translate-y-[50%] rounded-full bg-slate-100"
+        />
+      </motion.button>
+      {showForm && <ContactForm onclose={() => setShowForm(false)} />}
+    </>
   );
 };
 

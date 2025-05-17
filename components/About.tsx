@@ -1,5 +1,5 @@
 // import { CompanyLogo } from "./CompanyLogos";
-import EmailSubscriptionForm from "./EmailSubscriptionForm";
+// import EmailSubscriptionForm from "./EmailSubscriptionForm";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export default function About() {
@@ -25,12 +25,47 @@ export default function About() {
               alt=""
               className="w-[120px] h-[120px] mx-auto"
             /> */}
-            <h2 className="text-[20px] font-normal my-5 px-5 text-white">
+            {/* <h2 className="text-[20px] font-normal my-5 px-5 text-white">
               Phone : 8855993267
             </h2>
             <div className="w-full px-5">
               <EmailSubscriptionForm />
-            </div>
+            </div> */}
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-11/12 mx-auto p-2 my-4 text-[20px] font-light border-b-[1px] border-[#202020] mb-2 text-slate-300 bg-transparent focus:outline-none placeholder-slate-300 hover:placeholder-slate-100"
+            />
+
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-11/12 mx-auto p-2 my-4 text-[20px] font-light border-b-[1px] border-[#202020] mb-2 text-slate-300 bg-transparent focus:outline-none placeholder-slate-300 hover:placeholder-slate-100"
+            />
+            <input
+              type="company name"
+              placeholder="Company Name"
+              className="w-11/12 mx-auto p-2 my-4 text-[20px] font-light border-b-[1px] border-[#202020] mb-2 text-slate-300 bg-transparent focus:outline-none placeholder-slate-300 hover:placeholder-slate-100"
+            />
+            {/* <label htmlFor="Name">Website/Social Media Link</label> */}
+            <input
+              type="link"
+              placeholder="Website/Social Media Link"
+              className="w-11/12 mx-auto p-2 my-4 text-[20px] font-light border-b-[1px] border-[#202020] mb-2 text-slate-300 bg-transparent focus:outline-none placeholder-slate-300 hover:placeholder-slate-100"
+            />
+            {/* <label htmlFor="Name">Whats on you ?</label> */}
+            <input
+              type="text"
+              placeholder="What's in your mind ?"
+              className="w-11/12 mx-auto p-2 my-4 text-[20px] font-light border-b-[1px] border-[#202020] mb-2 text-slate-300 bg-transparent focus:outline-none placeholder-slate-300 hover:placeholder-slate-100"
+            />
+            <button
+              className="w-11/12 mx-auto text-[26px] font-thin tracking-wider text-slate-300 py-2 mb-2 mt-8 
+             bg-white/10 backdrop-blur-md backdrop-brightness-125 backdrop-contrast-150 shadow-lg border border-white/20"
+              style={{ borderRadius: "10px" }}
+            >
+              Submit
+            </button>
           </div>
           <div className="h-[480px] sm:w-7/12 md:w-8/12 w-full rounded-3xl bg-gradient-to-b from-black via-black to-[#202020] flex justify-center items-center">
             <h2 className="lg:text-[70px] md:text-[50px] text-[40px] tracking-wide font-semibold text-center text-white">

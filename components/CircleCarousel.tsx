@@ -6,6 +6,7 @@ import GalaxyParticles from "./GalaxyParticles";
 import { Spotlight } from "./ui/Spotlight";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import DrawOutlineButton from "./DrawOutlineButton";
+import ContactForm from "./ContactForm";
 
 const images = [
   {
@@ -86,6 +87,7 @@ const images = [
 const CircularImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
+  const [showForm, setShowForm] = useState(false);
 
   const handlePrev = () => {
     setCurrentIndex(
@@ -137,13 +139,17 @@ const CircularImageCarousel = () => {
         transition={{ duration: 0.8 }}
         className="w-full lg:max-w-screen-2xl md:max-w-screen-lg mx-auto flex justify-center items-center bg-black py-10"
       >
-        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
+        <button
+          className="relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none"
+          onClick={() => setShowForm(true)}
+        >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#130C0B] to-[#0C0807] px-7 py-1 text-sm font-medium text-white backdrop-blur-3xl">
             Discover Tech
           </span>
         </button>
       </motion.div>
+      {showForm && <ContactForm onclose={() => setShowForm(false)} />}
       <div className="relative max-w-screen-2xl mx-auto w-full h-auto pt-[100px] flex items-center justify-center bg-black z-0 ">
         <Spotlight
           className="-top-20 left-10  md:left-[400px] md:-top-32"
